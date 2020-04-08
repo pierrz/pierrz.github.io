@@ -1,0 +1,11 @@
+src/*/*.* filter=lfs diff=lfs merge=lfs -text
+src/*/*/*.* filter=lfs diff=lfs merge=lfs -text
+* !text !filter !merge !diff
+src/backgrounds/*/*.* filter=lfs diff=lfs merge=lfs -text
+src/va/+orig/*.* filter=lfs diff=lfs merge=lfs -text
+src/va/*.* filter=lfs diff=lfs merge=lfs -text
+assets/backgrounds/orig/*.* filter=lfs diff=lfs merge=lfs -text
+assets/backgrounds/orig/*.*© filter=lfs diff=lfs merge=lfs -text
+assets/va/+orig/*.* filter=lfs diff=lfs merge=lfs -text
+assets/va/originals/*.* filter=lfs diff=lfs merge=lfs -text
+assets/backgrounds/originals/*.* filter=lfs diff=lfs merge=lfs -text
