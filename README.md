@@ -1,3 +1,3 @@
 # Portfolio
 
-### --> https://pierrz.github.io
+Just the repository for my personal portfolio, set up as a Github page.
