@@ -288,6 +288,9 @@ a:hover > i.material-icons {
 	    -o-transition : all 0.8s ease-in-out;
 	    -moz-transition : all 0.8s ease-in-out;
 	}
+	#sk_question.gridCell p.title {
+		font-weight: 400;
+	}
 	#sk_question.gridCell > .link a:hover {
 		cursor: default;
 	}
