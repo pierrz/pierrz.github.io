@@ -418,17 +418,6 @@ a:hover > i.material-icons {
 		
 	} 
 
-	
-
-	
-	
-
-	
- 
-
-
-
-
 
 /***********************************************/
 /* TOP MENU */
@@ -771,8 +760,8 @@ PARALLAX  /   DESKTOP
 		display: none;
 	}
 	.menu-wrap ul li:nth-child(3) {
-	display: inline-block;
-}
+		display: inline-block;
+	}
 	#logo a,
 	.menu-button,
 	.menu-button:focus {
@@ -841,7 +830,8 @@ PARALLAX  /   DESKTOP
 		padding-right: 10%;
 	}
 	#bio .row .pitch p {
-		font-size: 1rem;
+		font-size: 1em;
+		/* font-size: 1rem; */
 		/* font-size: large; */
 	}
 
