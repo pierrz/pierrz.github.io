@@ -43,7 +43,8 @@ fetchData().then(format_data => {
                 elem_pic = "<img src=" + picture + ">",
                 elem_link = "<div class='link'><a href='" + format.uri + "' target='_blank'><i class='fa " + format.icon + " fa-3x'></i><h4>" + format.label + "</h4></a><div class='meta'><p class='title'><span>Inspiration :</span> " + title + " <span>(" + credits + ")</span></p><p class='type'>" + type + " related to " + subject + "</p><p class='source'>From the " + institution + ", via <a class='source' href='" + source + "' target='_blank'>Europeana</a></div></div>",
                 elem_link_min = "<div class='link link_min'><a href='" + format.uri + "' target='_blank'><i class='fa " + format.icon + " fa-3x'></i><h4>" + format.label + "</h4></a><div class='meta'><p class='type' style='text-align:center'>" + title + "</p></div></div>",
-                elem_link_mobile = "<li id=li_" + id_val + "><a href='" + format.uri + "' target='_blank'><i class='fa " + format.icon + " fa-3x'></i><h4>" + format.label + "</h4></a></li>";
+                elem_link_mobile = "<li id=li_" + id_val + "><a href='" + format.uri + "' target='_blank'><i class='fa " + format.icon + " fa-3x'></i><h4>" + format.label + "</h4></a></li>",
+                elem_no_href = "<div class='link'><a><i class='fa " + format.icon + " fa-3x'></i><h4>" + format.label + "</h4></a><div class='meta'><p class='title'><span>Inspiration :</span> " + title + " <span>(" + credits + ")</span></p><p class='type'>" + type + " related to " + subject + "</p><p class='source'>From the " + institution + ", via <a class='source' href='" + source + "' target='_blank'>Europeana</a></div></div>";
             
             // DESKTOP only
             //Create Cell "background"
@@ -71,13 +72,14 @@ fetchData().then(format_data => {
             
             //Create Cell meta
             if (
-                id_val == "sk_question"
-                || id_val == "sk_insta"
+                id_val == "sk_insta"
                 || id_val == "sk_500px"
                 || id_val == "sk_muzai"
                 // || id_val == "sk_flickr"
                 ) {
                     $( element ).append( elem_link_min );
+            } else if (id_val == "sk_question") {
+                $( element ).append( elem_no_href );
             } else {
                 $( element ).append( elem_link );
             };

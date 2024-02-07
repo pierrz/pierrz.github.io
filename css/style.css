@@ -286,6 +286,9 @@ a:hover > i.material-icons {
 	    -o-transition : all 0.8s ease-in-out;
 	    -moz-transition : all 0.8s ease-in-out;
 	}
+	#sk_question.gridCell > .link a:hover {
+		cursor: default;
+	}
 
 	/* Main */
 	.gridCell {
@@ -337,10 +340,10 @@ a:hover > i.material-icons {
 	}
 	.gridCell > .link i{
 			padding-top: 1.5em;
-		}
-		.gridCell > .link:hover i{
-			padding-top: 0.5em;
-		}
+	}
+	.gridCell > .link:hover i{
+		padding-top: 0.5em;
+	}
 
 	.gridCell > .link h4 {
 		opacity: 0;
