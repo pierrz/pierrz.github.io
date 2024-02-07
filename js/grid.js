@@ -15,7 +15,7 @@
 //     }
 // }
 
-import fetchComponent from './fetchComponent.js';
+import fetchComponent from './js/fetchComponent.js';
 
 // Grid creation funtion, calling fetchData 1st and then using its data
 fetchComponent('./assets/backgrounds/grid_parameters.json').then(format_data => {
