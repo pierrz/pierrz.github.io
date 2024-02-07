@@ -1,16 +1,24 @@
-// Asynchronous function getting the grid parameters data
-async function fetchData() {
-    try {
-        const response = await fetch('./assets/backgrounds/grid_parameters.json');
-        const jsonData = await response.json();
-        return jsonData;
-    } catch (error) {
-        console.error('Error loading JSON:', error);
-    }
-}
+// // Asynchronous function getting the grid parameters data
+// async function fetchComponent(mode) {
+//     try {
+//         const response = await fetch('./assets/backgrounds/grid_parameters.json');
+//         const jsonData = await response.json();
+//         const html = await response.text();
+//         if (mode == "json") {
+//             return jsonData;
+//         }
+//         if (mode == "html") {
+//             return html;
+//         }
+//     } catch (error) {
+//         console.error('Error loading JSON:', error);
+//     }
+// }
+
+import fetchComponent from './fetchComponent.js';
 
 // Grid creation funtion, calling fetchData 1st and then using its data
-fetchData().then(format_data => {
+fetchComponent('./assets/backgrounds/grid_parameters.json').then(format_data => {
     if (format_data) {
 
         //Main variables                            
