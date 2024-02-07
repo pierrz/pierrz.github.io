@@ -126,6 +126,7 @@ a:hover > i.material-icons {
 	color: var(--klr_unicorn);
 	/*color: rgb(40,40,40);*/
 
+
 #landing a i {
 	transition : all 0.4s;
     -webkit-transition :all 0.4s;
@@ -194,7 +195,7 @@ a:hover > i.material-icons {
 }
 
 /* SKILLS */
-/* #bio .row .skills {
+#bio .row .skills {
 	width: 100%;
 }
 
@@ -227,7 +228,7 @@ a:hover > i.material-icons {
 #bio .row .skill p span {
 	width: 100%;
 	font-weight: 500;
-} */
+}
 
 @media (max-width: 1200px) {
 	#bio .row .pitch {
@@ -235,9 +236,9 @@ a:hover > i.material-icons {
 		padding-left: 15%;
 		padding-right: 15%;
 	}	
-	/* #bio .row .skill {
+	#bio .row .skill {
 		padding: 0 20%;
-	} */
+	}
 		
 	} 
 
@@ -757,7 +758,7 @@ PARALLAX  /   DESKTOP
 	.menu-wrap ul li:nth-child(4),
 	#landing,
 	#links,
-	/* .skills, */
+	.skills,
 	#span_desktop {
 		display: none;
 	}
