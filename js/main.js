@@ -1,40 +1,47 @@
-/**
- * main.js
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2014, Codrops
- * http://www.codrops.com
- */
-(function() {
+// BIO CONTENT (issue in mobile (white overlay, all is invisible) related to section size/height probably)
+fetch('./html/bio.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('bio-content').innerHTML = data;
+});
 
-	var bodyEl = document.body,
-		openbtn = document.getElementById( 'open-button' ),
-		closebtn = document.getElementById( 'close-button' ),
-		closelink = document.querySelector( '.icon-list' ),
-		isOpen = false;
+// MODERNIZR DISABLES SKROLLR IF TOUCHSCREEN
+if (Modernizr.touch) {
+}
+else 
+{
+  skrollr.init();
+};
 
-	function init() {
-		initEvents();
-	}
+// ANIMSITION
+$(document).ready(function() {
+$(".animsition").animsition({
+  // Transition Type
+  inClass: 'fade-in',
+  outClass: 'fade-out',
 
-	function initEvents() {
-		openbtn.addEventListener( 'click', toggleMenu );
-		closelink.addEventListener( 'click', toggleMenu );
-		};
+  inDuration: 1500,
+  outDuration: 800,
+  linkElement: '.animsition-link',
+  // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+  loading: true,
+  loadingParentElement: 'body', //animsition wrapper element
+  loadingClass: 'animsition-loading',
+  loadingInner: '', // e.g '<img src="loading.svg" />'
+  timeout: false,
+  timeoutCountdown: 5000,
+  onLoadEvent: true,
+  browser: [ 'animation-duration', '-webkit-animation-duration'],
+  // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+  // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+  overlay : false,
+  overlayClass : 'animsition-overlay-slide',
+  overlayParentElement : 'body',
+  transition: function(url){ window.location.href = url; }
+});
+});
 
-	function toggleMenu() {
-		if( isOpen ) {
-			classie.remove( bodyEl, 'show-menu' );
-		}
-		else {
-			classie.add( bodyEl, 'show-menu' );
-		}
-		isOpen = !isOpen;
-	}
-
-	init();
-
-})();
+// SCROLLIT
+$(function(){
+    $.scrollIt();
+});
