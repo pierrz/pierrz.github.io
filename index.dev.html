@@ -33,15 +33,29 @@
     <!-- JAVASCRIPT -->
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
     <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
 
-      // BIO CONTENT
-      fetch('./html/bio.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('bio-content').innerHTML = data;
-        });
-    </script> -->
+      // // BIO CONTENT
+      // fetch('./html/bio.html')
+      //   .then(response => response.text())
+      //   .then(data => {
+      //       document.getElementById('bio-content').innerHTML = data;
+      //   });
+      // // BIO CONTENT
+      async function fetchHtml() {
+          try {
+              const response = await fetch('./html/bio.html');
+              const html = await response.text();
+              return html;
+          } catch (error) {
+              console.error('Error loading HTML:', error);
+          }
+      }
+      fetchHtml().then(bio_html => {
+            document.getElementById('bio-content').innerHTML = bio_html;
+      });
+      
+    </script>
     
     <!--[if lt IE 9]>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -250,19 +264,19 @@
 
   <script type="text/javascript">
 
-      // // BIO CONTENT
-      async function fetchHtml() {
-          try {
-              const response = await fetch('./html/bio.html');
-              const html = await response.text();
-              return html;
-          } catch (error) {
-              console.error('Error loading HTML:', error);
-          }
-      }
-      fetchHtml().then(bio_html => {
-            document.getElementById('bio-content').innerHTML = bio_html;
-      });
+      // // // BIO CONTENT
+      // async function fetchHtml() {
+      //     try {
+      //         const response = await fetch('./html/bio.html');
+      //         const html = await response.text();
+      //         return html;
+      //     } catch (error) {
+      //         console.error('Error loading HTML:', error);
+      //     }
+      // }
+      // fetchHtml().then(bio_html => {
+      //       document.getElementById('bio-content').innerHTML = bio_html;
+      // });
 
       // MODERNIZR DISABLES SKROLLR IF TOUCHSCREEN
       if (Modernizr.touch) {
