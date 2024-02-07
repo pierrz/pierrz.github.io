@@ -33,29 +33,6 @@
     <!-- JAVASCRIPT -->
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
     <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript">
-
-      // // BIO CONTENT
-      // fetch('./html/bio.html')
-      //   .then(response => response.text())
-      //   .then(data => {
-      //       document.getElementById('bio-content').innerHTML = data;
-      //   });
-      // // BIO CONTENT
-      async function fetchHtml() {
-          try {
-              const response = await fetch('./html/bio.html');
-              const html = await response.text();
-              return html;
-          } catch (error) {
-              console.error('Error loading HTML:', error);
-          }
-      }
-      fetchHtml().then(bio_html => {
-            document.getElementById('bio-content').innerHTML = bio_html;
-      });
-      
-    </script>
     
     <!--[if lt IE 9]>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -65,7 +42,7 @@
 
   <body class="animsition">
 
-      <!-- /PARALLAX -->
+      <!-- /PARALLAX | DESKTOP ONLY -->
       <!-- SECTION 1 : LANDING -->
       <div
       class="parallax-image-wrapper parallax-image-wrapper-100"
@@ -134,7 +111,9 @@
                 <ul id="menu" class="icon-list">
                   <li data-scroll-nav="1"><a><i class="material-icons">home</i><span>Home</span></a></li>
                   <li data-scroll-nav="2"><a><i class="material-icons">directions_bike</i><span>Bio</span></a></li>
+                  <!-- SECTION-3 | MOBILE ONLY -->
                   <li data-scroll-nav="3"><a><i class="material-icons">fingerprint</i><span>Links</span></a></li>
+                  <!-- SECTION-3 | DESKTOP ONLY -->
                   <li data-scroll-nav="4"><a><i class="material-icons">fingerprint</i><span>Links</span></a></li>
                 </ul>
               </nav>
@@ -154,11 +133,12 @@
         <div class="gap gap-100" id="landing" data-scroll-index="1" style="background-image:url(assets/va/time_crop.jpg)">
         <div class="container">
         <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-                    <h2>Crafting&nbsp;Data</h2>
-                    <h2>With&nbsp;Experience</h2>                    
-                    <a data-scroll-nav="2"><i class="material-icons">keyboard_arrow_down</i></a>
-                </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                <h1>Crafting
+                <br>Data-Driven&nbsp;Products
+                <br>With&nbsp;Experience</h1>                    
+                <a data-scroll-nav="2"><i class="material-icons">keyboard_arrow_down</i></a>
+            </div>
         </div>
         </div>
         </div>
@@ -170,34 +150,49 @@
         <div class="row">
               
               <div class="pitch col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" data-scroll-index="2" id="bio-content">
-                    <!-- <img src="assets/va/me.jpg" alt="me">
-                    <p>After work experience in Sound techniques &amp; Photography, I progressively shifted into Data Engineering and Web Development while being involved in projects related to Digital Asset Management, Video on Demand and Digital Humanities.</p>
-                    <p>I follow in my process the fundamentals of <span id="span-ux">UX&nbsp;Design</span> tempered with technical insights, in order to translate and implement the results into functional, attractive and scalable interfaces relying on solid <span id="span-ia">Data&nbsp;Architecture</span> and elegant <span id="span-ixd">Web&nbsp;Design</span>.</p>
-                    <p>I currently work as a Data Engineer at <a href="https://geophy.com/" target="_blank">GeoPhy</a>, a Dutch startup disrupting the real estate market by delivering clear, automated and instantanous property valuation, hence bringing transparency to this complex domain.</p>
-                    <p>I am also developing a streamlined, data-driven platform for cultural institutions to improve their collections with Linked Data and IIIF standards. It will soon be launched at <a href="https://muzz.app" target="_blank">Muzz.app</a>, and I'll be speaking about it at the <a href="https://iiif.io/event/2019/goettingen/program/78/" target="_blank">2019 IIIF Conference</a> in Göttingen, Germany.</p>
-                    <p>Want to know more about me ? Have a look on <span id="span_desktop" data-scroll-nav="4">what I do &amp; like</span><span id="span_mobile" data-scroll-nav="3">what I do &amp; like</span>, and here is my <a href="assets/va/peBarrault_CV_En.pdf" target="_blank">resume</a>.</p> -->
-              </div>
-
-              <!-- <div class="skills col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
                   
-                  <div id="img-ux" class="skill">
-                    <img src="assets/va/ux.png" alt="ux">
-                    <p>Based on <span>User Research/Design</span> tecniques, I take the pulse of what is at stakes and challenge it : requirements VS hidden needs, potential users VS real ones, resources VS strategy, data &amp; information VS content corpus.</p>
-                  </div>
-                  <div id="img-ia" class="skill">
-                    <img src="assets/va/ia.png" alt="ia">
-                    <p>Once the core elements are well identified, they can be translated into a tangible <span>Information Architecture</span> in order to emphasize, merge or discard them. While staying on a conceptual level, it remains the foundations for a specific <span>Data Architecture</span> strategy afterwards.</p>
-                  </div>
-                  <div id="img-ixd" class="skill">
-                    <img src="assets/va/ixd.png" alt="ixd">
-                    <p>With this overall approach, digital interfaces can be designed with a very minimal and dynamic code relying on <span>Data-Driven Design</span> principles. Then, it is just about finding the right balance between ergonomy and aesthetics, simplicity and control ... just joking. It's mostly about putting a lot of stuff in a very limited space.</p>
-                  </div>
-                  <div id="img-mask" class="skill">
-                    <img src="assets/va/mask.png" alt="mask">
-                  </div>
-
-              </div> -->
+                  <img src="assets/va/me.jpg" alt="me">
+                  
+                  <p>After work experience in Sound techniques and Photography, 
+                  I progressively dived into the realm of digital products 
+                  and graduated with a <strong>Master of Information Architecture</strong> 
+                  from the <span><a href="https://www.ens-lyon.fr/en/" target="_blank">Ecole Nationale Supérieure de Lyon</a></span> in France.
+                  </p>
+                  <!-- <p>After work experience in Sound techniques and Photography, I progressively dived into the realm of digital products and graduated with a <strong>Master of Information Architecture</strong> from the <span><a href="https://www.ens-lyon.fr/en/" target="_blank">Ecole Nationale Supérieure de Lyon</a></span> in France.
+                  </p> -->
+                  
+                  <p>I got different titles such as <strong>UX Designer</strong> and <strong>Project Manager</strong> until I progressively trained myself in <strong>Data engineering</strong> and <strong>Solution architecture</strong> throughout projects both in the private and non-profit sectors.
+                  <br>I am now looking to take on positions with more responsibilities such as <strong>Product Manager</strong>.
+                  </p>
+                  
+                  <p>I have had the chance to be involved in a variety of domains such as <strong>digital asset management, video on demand, digital humanities, banking, real estate, digital marketplace, aviation and food security monitoring</strong>.
+                  </p>                  
+                  
+                  <p>Guided by my initial training in Information Architecture and my work experience with <strong>Agile/SCRUM techniques</strong>, I tend to follow <strong>design principles</strong> while taking great care of gathering and considering every technical aspects with all due respect.
+                  <br>My drive is to properly <strong>define and structure</strong> the work at hand and eventually build up momentum as each component gets delivered, 
+                  both to save time/resources and to use it as a stepping-stone for further developments, whichever it could be.
+                  </p>
+                  
+                  <p>I currently work at the <strong>World Food Program</strong> in Rome as a Software engineer, refactoring the data pipelines which support the data collection related to food security monitoring. Part of this work can be seen through the <span><a href="https://hungermap.wfp.org/" target="_blank">HungerMap</a></span> product, a live dashboard focused on the situation of 30+ countries.
+                  </p>
+                  
+                  <p>Besides, I have <strong>designed and developed</strong> a streamlined, data-driven <strong>platform</strong> for cultural institutions to improve their collections with Linked Data and IIIF standards, and embedded with Computer vision features. I presented this project at the 2019 IIIF Conference in Göttingen, Germany. It is available at <span><a href="https://muzai.io" target="_blank">Muzai.io</a></span>.
+                  </p>
+                  
+                  <!-- <p>Want to know more about me ?
+                      Here is my <span>
+                      <a href="https://www.canva.com/design/DAF73cUgONk/WNYOrv32tOzVlcROrSSqXg/view?utm_content=DAF73cUgONk&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank">resume</a>
+                      </span>.
+                  </p> -->
+                  
+                  <p>Or have a look at 
+                  <span id="span_desktop" data-scroll-nav="4">what I like and do</span>
+                  <span id="span_mobile" data-scroll-nav="3">what I like and do</span>.
+                  </p>
                 
+              </div>
+              
+              <!-- .SECTION-3 | MOBILE ONLY -->
               <div class="links_mobile col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
                   <h3 data-scroll-index="3">Online Identities</h3>
                   <ul class="icon-list icon-list-left"></ul>
@@ -209,7 +204,7 @@
         </div>
         <!-- /.SECTION-2 -->
         
-        <!-- .SECTION-3 -->
+        <!-- .SECTION-3 | DESKTOP ONLY -->
         <div class="gap gap-100" id="links" data-scroll-index="4">
         <div class="container">
           
@@ -264,19 +259,12 @@
 
   <script type="text/javascript">
 
-      // // // BIO CONTENT
-      // async function fetchHtml() {
-      //     try {
-      //         const response = await fetch('./html/bio.html');
-      //         const html = await response.text();
-      //         return html;
-      //     } catch (error) {
-      //         console.error('Error loading HTML:', error);
-      //     }
-      // }
-      // fetchHtml().then(bio_html => {
-      //       document.getElementById('bio-content').innerHTML = bio_html;
-      // });
+      // // BIO CONTENT (issue in mobile (white overlay, all is invisible))
+      // fetch('./html/bio.html')
+      //   .then(response => response.text())
+      //   .then(data => {
+      //       document.getElementById('bio-content').innerHTML = data;
+      //   });
 
       // MODERNIZR DISABLES SKROLLR IF TOUCHSCREEN
       if (Modernizr.touch) {
