@@ -153,7 +153,7 @@ a:hover > i.material-icons {
 	height: 140%;
 }
 #bio > .container {
-	padding-top: 3	em;
+	padding-top: 3rem;
 }
 
 #bio #skills_col > div {
@@ -161,13 +161,14 @@ a:hover > i.material-icons {
 }
 #bio .row {
 	height: 100%;
-	padding-top: 3em;
+	padding-top: 3rem;
 }
 
 /* PITCH */
 #bio .row .pitch {
 	width: 100%;
-	padding: 2em 30%;
+	padding: 2em 20%;
+	font-size: 2rem;
 }
 
 #bio .row .pitch img {
@@ -197,6 +198,7 @@ a:hover > i.material-icons {
 /* SKILLS */
 #bio .row .skills {
 	width: 100%;
+	display: none;
 }
 
 #bio .row .skill {
@@ -835,6 +837,9 @@ PARALLAX  /   DESKTOP
 		padding-left: 10%;
 		padding-right: 10%;
 	}
+	#bio .row .pitch p {
+		font-size: 1rem;
+	}
 
 	#bio .row .pitch span:hover,
 	#bio .row .pitch span:hover a {
@@ -853,18 +858,21 @@ PARALLAX  /   DESKTOP
 		background-color: var(--klr_unicorn);
 	}
 
-
-	#bio .row .pitch span,
-	#bio .row .pitch span a {
-		
+	#bio .row .pitch span a {	
 		border-bottom: #7F7F7F 1px dashed;
-}
-
+	}
+	#bio .row .pitch span {
+		border-bottom: none;
+	}
+	/* #bio .row .pitch span,
+	#bio .row .pitch span a {	
+		border-bottom: #7F7F7F 1px dashed;
+	}
 
 	#bio .row .pitch span,
 	#bio .row .pitch span a {
 		border-bottom: none;
-	}
+	} */
 
 	#span_mobile {
 		display: initial;
