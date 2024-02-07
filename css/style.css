@@ -168,7 +168,6 @@ a:hover > i.material-icons {
 #bio .row .pitch {
 	width: 100%;
 	padding: 2em 20%;
-	font-size: 2rem;
 }
 
 #bio .row .pitch img {
@@ -180,6 +179,7 @@ a:hover > i.material-icons {
 }
 
 #bio .row .pitch p {
+	font-size: large;
 	line-height: 1.35em;
 }
 
@@ -838,7 +838,8 @@ PARALLAX  /   DESKTOP
 		padding-right: 10%;
 	}
 	#bio .row .pitch p {
-		font-size: 1rem;
+		/* font-size: 1rem; */
+		font-size: large;
 	}
 
 	#bio .row .pitch span:hover,
