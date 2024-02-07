@@ -35,6 +35,15 @@
     <!-- JAVASCRIPT -->
     <script src="js/modernizr.custom.js"></script>
     <script type='text/javascript' src="js/jquery-3.5.1.min.js"></script>
+    <!-- <script type="text/javascript">
+
+      // BIO CONTENT
+      fetch('./html/bio.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('bio-content').innerHTML = data;
+        });
+    </script> -->
     
 
     <!--[if lt IE 9]>
@@ -258,12 +267,12 @@
 
   <script type="text/javascript">
 
-      // BIO CONTENT
-      fetch('./html/bio.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('bio-content').innerHTML = data;
-        });
+      // // BIO CONTENT
+      // fetch('./html/bio.html')
+      //   .then(response => response.text())
+      //   .then(data => {
+      //       document.getElementById('bio-content').innerHTML = data;
+      //   });
 
       // MODERNIZR DISABLES SKROLLR IF TOUCHSCREEN
       if (Modernizr.touch) {
