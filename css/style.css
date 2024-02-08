@@ -504,7 +504,8 @@ a:hover > i.material-icons {
 
 .icon-list {
 	text-align: center;
-	padding: 8px;
+	padding: 4px;
+	/* padding: 8px; */
 }
 .icon-list li {
 	list-style: none;
@@ -529,9 +530,15 @@ a:hover > i.material-icons {
 	opacity: 0;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-size: 0.7em;
+	/* font-size: 0.7em; */
+	font-size: 1em;
 	font-weight: 700;
-	padding-top: 0.5em;
+	padding-top: 0.2em;
+	/* padding-top: 0.5em; */
+}
+
+.icon-list li i.material-icons {
+	font-size: 32px;
 }
 
 .icon-list li.active a,
