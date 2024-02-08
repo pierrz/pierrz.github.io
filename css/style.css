@@ -537,6 +537,7 @@ a:hover > i.material-icons {
 	/* padding-top: 0.5em; */
 }
 
+.menu-button i.material-icons,
 .icon-list li i.material-icons {
 	font-size: 32px;
 }

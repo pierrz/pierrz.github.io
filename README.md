@@ -3,6 +3,7 @@
 Just the repository for my personal portfolio, set up as a Github page.
 
 ## To-Do
+- Hamburger to cross menu UI
 - Final cleaning
 - Modernizr (with html5shiv) and jQuery update
 - Minifying
