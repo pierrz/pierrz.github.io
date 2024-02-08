@@ -290,6 +290,7 @@ a:hover > i.material-icons {
 	}
 	#sk_question.gridCell p.title {
 		font-weight: 300;
+		padding-top: 0;
 	}
 	#sk_question.gridCell > .link a:hover {
 		cursor: default;
