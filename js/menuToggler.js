@@ -27,11 +27,9 @@
 
 	function toggleMenu() {
 		if( isOpen ) {
-			// classie.remove( bodyEl, 'show-menu' );
 			bodyEl.classList.remove( 'show-menu' );
 		}
 		else {
-			// classie.add( bodyEl, 'show-menu' );
 			bodyEl.classList.add( 'show-menu' );
 		}
 		isOpen = !isOpen;
