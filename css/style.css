@@ -155,7 +155,7 @@ a:hover > i.material-icons {
 /* PITCH */
 #bio .row .pitch {
 	width: 100%;
-	padding: 2em 20%;
+	padding: 2em 20% 6em 20%;
 }
 
 #bio .row .pitch img {

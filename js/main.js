@@ -4,6 +4,7 @@ Script handling how the main components behave
 
 const maxWidth = 768;
 
+
 // ENABLED (or not) GRID
 function loadOrUnloadScript() {
   
@@ -92,7 +93,6 @@ $(function(){
   else {
     const bioTag = document.getElementById('bio-content');
     bioTag.setAttribute('data-scroll-index', '2');
-    // $.scrollIt()
     $.scrollIt({
       topOffset: -50     // hack to trigger on the last nav (technically, it should be -110)
     });
