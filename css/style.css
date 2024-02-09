@@ -813,7 +813,7 @@ PARALLAX  /   DESKTOP
 		color: rgba(40,40,40,0.7);
 	}
 	#bio .row .pitch {
-		padding-top: 4em;
+		/* padding-top: 4em; */
 		padding-left: 10%;
 		padding-right: 10%;
 	}
