@@ -2,11 +2,12 @@
 Script handling how the main components behave
 */
 
+const maxWidth = 768;
+
 // ENABLED (or not) GRID
 function loadOrUnloadScript() {
   const scriptId = 'gridScript',
-        existingScript = document.getElementById(scriptId),
-        maxWidth = 768;
+        existingScript = document.getElementById(scriptId);
 
   if (window.innerWidth < maxWidth) {
     // If the window is smaller than maxWidth and the script exists, remove it
@@ -37,13 +38,12 @@ fetch('./html/bio.html')
     document.getElementById('bio-content').innerHTML = data;
 });
 
+
 // MODERNIZR DISABLES SKROLLR IF TOUCHSCREEN
-if (Modernizr.touch) {
-}
-else 
-{
+if (!Modernizr.touch) {
   skrollr.init();
-};
+}
+
 
 // ANIMSITION PARAMETERS
 $(document).ready(function() {
@@ -73,11 +73,20 @@ $(document).ready(function() {
   });
 });
 
+
 // SCROLLIT TRIGGER 
 $(function(){
-  // $.scrollIt();
+
+  // apply top offset only for desktop
+  if (window.innerWidth > maxWidth) {
+    const topOffset_px = -110;
+  }
+  else {
+    const topOffset_px = 0;
+  }
+
   $.scrollIt({
-    topOffset: -110
+    topOffset: topOffset_px
   });
   
 });

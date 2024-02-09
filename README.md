@@ -2,9 +2,6 @@
 Just the repository for my personal portfolio, set up as a Github page. Fancy enough.
 
 ## To-Do
-- Hamburger to cross menu UI
-- fix grid nav/scroll
-- load/remove grid JS based on resolution
 - Minifying
 - Pitch final touch
 
