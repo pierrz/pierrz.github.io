@@ -137,9 +137,9 @@ a:hover > i.material-icons {
 /***********************************************/
 /* SECTION 2 - SERVICES */
 /***********************************************/
-#bio {
+/* #bio {
 	height: 140%;
-}
+} */
 #bio > .container {
 	padding-top: 3rem;
 }

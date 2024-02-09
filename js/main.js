@@ -78,5 +78,17 @@ $(document).ready(function() {
 
 // SCROLLIT TRIGGER 
 $(function(){
-  $.scrollIt()
+  // $.scrollIt()
+
+  // apply top offset only for desktop
+  if (window.innerWidth > maxWidth) {
+    $.scrollIt({
+      // technically, it should be -110
+      topOffset: -50
+      // topOffset: -110
+    });
+  }
+  else {
+    $.scrollIt()
+  }
 });
