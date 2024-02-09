@@ -65,8 +65,7 @@ p {
 	text-align: justify;
 	font-weight: 300;
 	line-height: 1.15em;
-	/* font-size: 1.1em; */
-	font-size: 1.3em;
+	font-size: 1.1em;
 	margin-bottom: 1em;
 }
 
@@ -762,7 +761,7 @@ PARALLAX  /   DESKTOP
 	#logo {
 		z-index: 2000;
 		font-size: 0.9em;
-		top: -16px;
+		top: -11px;
 	}
 
 	#header .icon-list {
