@@ -483,7 +483,7 @@ a:hover > i.material-icons {
 	text-align: right;
 	/* desktop specific */
 	font-size: 1.3em;
-	padding: 38px 40px;
+	padding: 38px;
 }
 #logo a {
 	color: var(--klr_bkgrnd);
@@ -753,7 +753,8 @@ PARALLAX  /   DESKTOP
 	#logo {
 		z-index: 2000;
 		font-size: 1.1em;
-		top: -16px;
+		/* top: -16px; */
+		padding: 30px;
 	}
 
 	#header .icon-list {
