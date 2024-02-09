@@ -39,7 +39,7 @@ fetchData().then(format_data => {
                 source = "http://www.europeana.eu/portal/en/record" + format.europeanaId + ".html",
 
             //Inserted HTML elements
-                // url_pic = "url('" + picture + "')",    not in use yet
+                // type tag is disabled via CSS due to readibility concerns
                 elem_pic = "<img src=" + picture + ">",
                 elem_link = "<div class='link'><a href='" + format.uri + "' target='_blank'><i class='fa " + format.icon + " fa-3x'></i><h4>" + format.label + "</h4></a><div class='meta'><p class='title'><span>Inspiration :</span> " + title + " <span>(" + credits + ")</span></p><p class='type'>" + type + " related to " + subject + "</p><p class='source'>From the " + institution + ", via <a class='source' href='" + source + "' target='_blank'>Europeana</a></div></div>",
                 elem_link_min = "<div class='link link_min'><a href='" + format.uri + "' target='_blank'><i class='fa " + format.icon + " fa-3x'></i><h4>" + format.label + "</h4></a><div class='meta'><p class='title'>" + title + "</p></div></div>",

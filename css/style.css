@@ -65,7 +65,8 @@ p {
 	text-align: justify;
 	font-weight: 300;
 	line-height: 1.15em;
-	font-size: 1.1em;
+	/* font-size: 1.1em; */
+	font-size: 1.3em;
 	margin-bottom: 1em;
 }
 
@@ -732,6 +733,9 @@ PARALLAX  /   DESKTOP
 	border-bottom: none;
 	font-weight: 500;
 }
+#bio .row .pitch span#span_desktop:hover {
+	color: var(--klr_bkgrnd);
+}
 
 @media (max-width: 768px) { 
 	.menu-wrap ul li:nth-child(1),
@@ -758,7 +762,7 @@ PARALLAX  /   DESKTOP
 	#logo {
 		z-index: 2000;
 		font-size: 0.9em;
-		top: -11px;
+		top: -16px;
 	}
 
 	#header .icon-list {
