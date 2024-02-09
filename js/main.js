@@ -1,4 +1,36 @@
-// BIO CONTENT (issue in mobile (white overlay, all is invisible) related to section size/height probably)
+/* 
+Script handling how the main components behave
+*/
+
+// ENABLED (or not) GRID
+function loadOrUnloadScript() {
+  const scriptId = 'gridScript',
+        existingScript = document.getElementById(scriptId),
+        maxWidth = 768;
+
+  if (window.innerWidth > maxWidth) {
+    // If the window is wider than maxWidth and the script exists, remove it
+    if (existingScript) {
+      existingScript.remove();
+    }
+  } else {
+    // If the window is not wider than maxWidth and the script does not already exist, add it
+    if (!existingScript) {
+      const script = document.createElement('script');
+      script.id = scriptId;
+      script.type = 'text/javascript';
+      script.src = 'js/grid.js';
+      document.body.appendChild(script);
+    }
+  }
+};
+
+loadOrUnloadScript();                                     // Run when the page loads
+window.addEventListener('resize', loadOrUnloadScript);    // Re-check whenever the window is resized
+
+
+// BIO CONTENT
+// issue in mobile (white overlay, all is invisible) related to section size/height probably
 fetch('./html/bio.html')
 .then(response => response.text())
 .then(data => {
@@ -13,35 +45,35 @@ else
   skrollr.init();
 };
 
-// ANIMSITION
+// ANIMSITION PARAMETERS
 $(document).ready(function() {
-$(".animsition").animsition({
-  // Transition Type
-  inClass: 'fade-in',
-  outClass: 'fade-out',
+  $(".animsition").animsition({
+    // Transition Type
+    inClass: 'fade-in',
+    outClass: 'fade-out',
 
-  inDuration: 1500,
-  outDuration: 800,
-  linkElement: '.animsition-link',
-  // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
-  loading: true,
-  loadingParentElement: 'body', //animsition wrapper element
-  loadingClass: 'animsition-loading',
-  loadingInner: '', // e.g '<img src="loading.svg" />'
-  timeout: false,
-  timeoutCountdown: 5000,
-  onLoadEvent: true,
-  browser: [ 'animation-duration', '-webkit-animation-duration'],
-  // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-  // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-  overlay : false,
-  overlayClass : 'animsition-overlay-slide',
-  overlayParentElement : 'body',
-  transition: function(url){ window.location.href = url; }
-});
+    inDuration: 1500,
+    outDuration: 800,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
 });
 
-// SCROLLIT
+// SCROLLIT TRIGGER 
 $(function(){
     $.scrollIt();
 });
