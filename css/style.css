@@ -235,6 +235,7 @@ a:hover > i.material-icons {
 /***********************/
 /* SECTION-5 */
 #links {
+	margin-top: 3rem;
 	overflow: hidden;
 }
 #links.gap > .container > .row {
@@ -685,10 +686,6 @@ PARALLAX  /   DESKTOP
 
 .skrollr .gap {
 	background: transparent !important;
-}
-
-.gap-10 {
-	height:10%;
 }
 
 .gap-50 {
