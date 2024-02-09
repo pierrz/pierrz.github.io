@@ -687,6 +687,10 @@ PARALLAX  /   DESKTOP
 	background: transparent !important;
 }
 
+.gap-10 {
+	height:10%;
+}
+
 .gap-50 {
 	height:50%;
 }
