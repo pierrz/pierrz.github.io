@@ -12,10 +12,9 @@
 
 	const bodyEl = document.body,
 		menuButton = document.getElementById( 'open-button' ),
-		// menuIcon = document.querySelector( 'material-icons' ),
 		menuIcon = menuButton.querySelector( '.material-icons' ),
-		iconList = document.querySelector( '.icon-list' ),
-		isOpen = false;
+		iconList = document.querySelector( '.icon-list' );
+	var isOpen = false;
 
 	function toggleMenu() {
 		if( isOpen ) {
