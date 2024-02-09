@@ -84,7 +84,7 @@ $(function(){
   if (window.innerWidth > maxWidth) {
     $.scrollIt({
       // technically, it should be -110
-      topOffset: -50
+      topOffset: -1
       // topOffset: -110
     });
   }
