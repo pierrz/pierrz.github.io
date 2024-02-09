@@ -234,10 +234,10 @@ a:hover > i.material-icons {
 
 /***********************/
 /* SECTION-5 */
-#links {
+#grid {
 	overflow: hidden;
 }
-#links.gap > .container > .row {
+#grid.gap > .container > .row {
 	height: 33.33% !important;
 }
 
@@ -715,7 +715,7 @@ PARALLAX  /   DESKTOP
 .menu-wrap ul li:nth-child(3) {
 	display: none;
 }
-.links_mobile,
+#links_mobile,
 #span_mobile {
 	display: none;
 }
@@ -727,7 +727,7 @@ PARALLAX  /   DESKTOP
 	.menu-wrap ul li:nth-child(1),
 	.menu-wrap ul li:nth-child(4),
 	#landing,
-	#links,
+	#grid,
 	.skills,
 	#span_desktop {
 		display: none;
@@ -833,40 +833,39 @@ PARALLAX  /   DESKTOP
 
 	#span_mobile {
 		display: initial;
-		
 		cursor: pointer;
 	}
-	.links_mobile {
+	#links_mobile {
 		display: inherit;
 	    padding: 4em;
 	}
-	.links_mobile ul {
+	#links_mobile ul {
 		display: inline-block;
 		width: 48%;
 		padding: 1%;
 	}
-	.links_mobile ul.icon-list li {
+	#links_mobile ul.icon-list li {
 		display: inline-block;
 		width: 100%;
 	}
-	.links_mobile ul.icon-list li a {
+	#links_mobile ul.icon-list li a {
 		padding-left: 0;
 	}
-	.links_mobile ul.icon-list li:hover a {
+	#links_mobile ul.icon-list li:hover a {
 		color: var(--klr_unicorn);
 	}
-	.links_mobile ul.icon-list-left li a {
+	#links_mobile ul.icon-list-left li a {
 		text-align: right;
 		padding-right: 8%;
 	}
-	.links_mobile ul.icon-list-left li a h4 {
+	#links_mobile ul.icon-list-left li a h4 {
 		text-align: right;
 	}
-	.links_mobile ul.icon-list-right li a {
+	#links_mobile ul.icon-list-right li a {
 		text-align: left;
 		padding-left: 8%;
 	}
-	.links_mobile ul li a h4 {
+	#links_mobile ul li a h4 {
 		font-size: 0.4em;
 	}
 }
