@@ -75,5 +75,9 @@ $(document).ready(function() {
 
 // SCROLLIT TRIGGER 
 $(function(){
-    $.scrollIt();
+  // $.scrollIt();
+  $.scrollIt({
+    topOffset: -110
+  });
+  
 });
