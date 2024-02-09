@@ -78,17 +78,20 @@ $(document).ready(function() {
 
 // SCROLLIT TRIGGER 
 $(function(){
-  // $.scrollIt()
-
+  
   // apply top offset only for desktop
   if (window.innerWidth > maxWidth) {
+    const bioTag = document.getElementById('bio');
+    bioTag.setAttribute('data-scroll-index', '2');
     $.scrollIt({
-      // technically, it should be -110
-      topOffset: -1
-      // topOffset: -110
+      topOffset: -1     // hack to trigger on the last nav (technically, it should be -110)
     });
   }
+
   else {
+    const bioTag = document.getElementById('bio-content');
+    bioTag.setAttribute('data-scroll-index', '2');
     $.scrollIt()
   }
+  
 });
