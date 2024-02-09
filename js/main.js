@@ -82,7 +82,7 @@ $(function(){
   // apply top offset only for desktop
   if (window.innerWidth > maxWidth) {
     $.scrollIt({
-      topOffset: -110
+      topOffset: -50
     });
   }
   else {
