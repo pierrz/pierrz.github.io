@@ -686,13 +686,16 @@ PARALLAX  /   DESKTOP
 	background: transparent !important;
 }
 
-/* .gap-50 {
-	height:50%;
+.gap-50 {
+	height: 50%;
 }
 
 .gap-100 {
-	height:100%;
-} */
+	height: 100%;
+}
+.gap-100#bio {
+	height: auto;
+}
 
 .gap > .container {
 	height: 100%;
