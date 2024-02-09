@@ -10,8 +10,9 @@
  */
 (function() {
 
-	var bodyEl = document.body,
+	const bodyEl = document.body,
 		menuButton = document.getElementById( 'open-button' ),
+		menuIcon = menuButton.querySelector( 'material-icons' ),
 		iconList = document.querySelector( '.icon-list' ),
 		isOpen = false;
 
@@ -26,13 +27,13 @@
 	};
 
 	function changeIcon() {
-		const icon = this.querySelector('.material-icons');
-		if (icon.textContent === 'menu') {
-			icon.textContent = 'close'; // Change to close icon
-			this.setAttribute('aria-label', 'Close'); // Update aria-label for accessibility
+		// const icon = this.querySelector('.material-icons');
+		if (menuIcon.textContent === 'menu') {
+			menuIcon.textContent = 'close'; // Change to close icon
+			menuIcon.setAttribute('aria-label', 'Close'); // Update aria-label for accessibility
 		} else {
-			icon.textContent = 'menu'; // Change back to menu icon
-			this.setAttribute('aria-label', 'Menu'); // Update aria-label for accessibility
+			menuIcon.textContent = 'menu'; // Change back to menu icon
+			menuIcon.setAttribute('aria-label', 'Menu'); // Update aria-label for accessibility
 		}
 	};
 
