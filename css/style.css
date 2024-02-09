@@ -483,13 +483,16 @@ a:hover > i.material-icons {
 	margin: 0;
 	text-transform: uppercase;
 	text-align: right;
+	/* desktop specific */
+	font-size: 1.3em;
+	padding: 38px 40px;
 }
-@media (min-width: 768px) { 
+/* @media (min-width: 768px) { 
 	#logo {
 		font-size: 1.2em;
 		padding: 43px 40px;
 	}
-}
+} */
 #logo a {
 	color: var(--klr_bkgrnd);
 }
@@ -760,8 +763,8 @@ PARALLAX  /   DESKTOP
 	}
 	#logo {
 		z-index: 2000;
-		font-size: 0.9em;
-		top: -11px;
+		font-size: 1.1em;
+		top: -16px;
 	}
 
 	#header .icon-list {
