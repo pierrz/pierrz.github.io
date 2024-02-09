@@ -446,6 +446,9 @@ a:hover > i.material-icons {
 	color: var(--klr_bkgrnd);
 	outline-style: none;
 }
+.menu-button:focus {
+	outline: none;
+}
 .show-menu .menu-button,
 .show-menu .menu-button:focus {
 	color: var(--klr_unicorn);

@@ -12,16 +12,17 @@
 
 	var bodyEl = document.body,
 		openbtn = document.getElementById( 'open-button' ),
-		closebtn = document.getElementById( 'close-button' ),
+		// closebtn = document.getElementById( 'close-button' ),
 		closelink = document.querySelector( '.icon-list' ),
 		isOpen = false;
 
-	function init() {
-		initEvents();
-	}
+	// function init() {
+	// 	initEvents();
+	// }
 
 	function initEvents() {
 		openbtn.addEventListener( 'click', toggleMenu );
+		openbtn.addEventListener( 'click', changeIcon );
 		closelink.addEventListener( 'click', toggleMenu );
 		};
 
@@ -35,6 +36,30 @@
 		isOpen = !isOpen;
 	}
 
-	init();
+	function changeIcon() {
+		const icon = this.querySelector('.material-icons');
+		if (icon.textContent === 'menu') {
+			icon.textContent = 'close'; // Change to close icon
+			this.setAttribute('aria-label', 'Close'); // Update aria-label for accessibility
+		} else {
+			icon.textContent = 'menu'; // Change back to menu icon
+			this.setAttribute('aria-label', 'Menu'); // Update aria-label for accessibility
+		}
+	}
+
+	// init();
+	initEvents();
 
 })();
+
+
+// document.getElementById('open-button').addEventListener('click', function() {
+// 	const icon = this.querySelector('.material-icons');
+// 	if (icon.textContent === 'menu') {
+// 	  icon.textContent = 'close'; // Change to close icon
+// 	  this.setAttribute('aria-label', 'Close'); // Update aria-label for accessibility
+// 	} else {
+// 	  icon.textContent = 'menu'; // Change back to menu icon
+// 	  this.setAttribute('aria-label', 'Menu'); // Update aria-label for accessibility
+// 	}
+//   });
