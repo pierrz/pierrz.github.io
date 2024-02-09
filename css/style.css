@@ -753,7 +753,7 @@ PARALLAX  /   DESKTOP
 	#logo {
 		z-index: 2000;
 		font-size: 1.1em;
-		/* top: -16px; */
+		top: -3px;
 		padding: 30px;
 	}
 
