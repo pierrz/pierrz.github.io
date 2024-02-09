@@ -726,7 +726,7 @@ PARALLAX  /   DESKTOP
 #span_mobile {
 	display: none;
 }
-#span_desktop {
+#bio .row .pitch span#span_desktop {
 	cursor: pointer;
 	color: var(--klr_unicorn);
 	border-bottom: none;
