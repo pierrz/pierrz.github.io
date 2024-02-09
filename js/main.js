@@ -6,6 +6,7 @@ const maxWidth = 768;
 
 // ENABLED (or not) GRID
 function loadOrUnloadScript() {
+  
   const scriptId = 'gridScript',
         existingScript = document.getElementById(scriptId);
 
@@ -14,7 +15,8 @@ function loadOrUnloadScript() {
     if (existingScript) {
       existingScript.remove();
     }
-  } else {
+  } 
+  else {
     // If the window is wider than maxWidth and the script does not already exist, add it
     if (!existingScript) {
       const script = document.createElement('script');
@@ -79,14 +81,18 @@ $(function(){
 
   // apply top offset only for desktop
   if (window.innerWidth > maxWidth) {
-    const topOffset_px = -110;
+    // const topOffset_px = -110;
+    $.scrollIt({
+      topOffset: -110
+    });
   }
   else {
-    const topOffset_px = 0;
-  }
+    $.scrollIt()
+    // const topOffset_px = 0;
+  };
 
-  $.scrollIt({
-    topOffset: topOffset_px
-  });
+  // $.scrollIt({
+  //   topOffset: topOffset_px
+  // });
   
 });
