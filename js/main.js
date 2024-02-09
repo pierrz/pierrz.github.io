@@ -79,7 +79,7 @@ $(document).ready(function() {
 // SCROLLIT TRIGGER 
 $(function(){
   
-  // apply top offset only for desktop
+  // desktop
   if (window.innerWidth > maxWidth) {
     const bioTag = document.getElementById('bio');
     bioTag.setAttribute('data-scroll-index', '2');
@@ -88,10 +88,14 @@ $(function(){
     });
   }
 
+  // mobile
   else {
     const bioTag = document.getElementById('bio-content');
     bioTag.setAttribute('data-scroll-index', '2');
-    $.scrollIt()
+    // $.scrollIt()
+    $.scrollIt({
+      topOffset: -50     // hack to trigger on the last nav (technically, it should be -110)
+    });
   }
-  
+
 });
