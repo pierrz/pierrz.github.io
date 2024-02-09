@@ -262,8 +262,10 @@ a:hover > i.material-icons {
 .gridCell > .link_min p.title,
 #sk_question.gridCell p.title {
 	font-weight: 300;
-	padding-top: 0;
 	text-align: center;
+}
+#sk_question.gridCell p.title {
+	padding-top: 0;
 }
 #sk_question.gridCell > .link a:hover {
 	cursor: default;
@@ -727,6 +729,8 @@ PARALLAX  /   DESKTOP
 #span_desktop {
 	cursor: pointer;
 	color: var(--klr_unicorn);
+	border-bottom: none;
+	font-weight: 500;
 }
 
 @media (max-width: 768px) { 
