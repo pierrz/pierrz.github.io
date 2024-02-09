@@ -259,9 +259,11 @@ a:hover > i.material-icons {
 	-o-transition : all 0.8s ease-in-out;
 	-moz-transition : all 0.8s ease-in-out;
 }
+.gridCell > .link_min p.title,
 #sk_question.gridCell p.title {
 	font-weight: 300;
 	padding-top: 0;
+	text-align: center;
 }
 #sk_question.gridCell > .link a:hover {
 	cursor: default;

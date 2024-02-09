@@ -81,18 +81,12 @@ $(function(){
 
   // apply top offset only for desktop
   if (window.innerWidth > maxWidth) {
-    // const topOffset_px = -110;
     $.scrollIt({
       topOffset: -110
     });
   }
   else {
     $.scrollIt()
-    // const topOffset_px = 0;
-  };
-
-  // $.scrollIt({
-  //   topOffset: topOffset_px
-  // });
+  }
   
 });
