@@ -352,8 +352,6 @@ a:hover > i.material-icons {
 	font-size: 0.9em;
 	font-weight: 600;
 }
-/*@media (min-width: 768px) {
-}*/
 
 .gridCell p.title span {
 	font-size: 0.8em;
@@ -487,12 +485,6 @@ a:hover > i.material-icons {
 	font-size: 1.3em;
 	padding: 38px 40px;
 }
-/* @media (min-width: 768px) { 
-	#logo {
-		font-size: 1.2em;
-		padding: 43px 40px;
-	}
-} */
 #logo a {
 	color: var(--klr_bkgrnd);
 }
@@ -515,7 +507,6 @@ a:hover > i.material-icons {
 .icon-list {
 	text-align: center;
 	padding: 4px;
-	/* padding: 8px; */
 }
 .icon-list li {
 	list-style: none;
@@ -540,11 +531,9 @@ a:hover > i.material-icons {
 	opacity: 0;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	/* font-size: 0.7em; */
 	font-size: 1em;
 	font-weight: 700;
 	padding-top: 0.2em;
-	/* padding-top: 0.5em; */
 }
 
 .menu-button i.material-icons,
@@ -802,8 +791,7 @@ PARALLAX  /   DESKTOP
 		font-size: 1em;
 	}
 	#bio .container,
-	#bio .container .row/*,
-	#bio .container .row .pitch */{
+	#bio .container .row {
 		height: 100%;
 	}
 	
@@ -813,13 +801,10 @@ PARALLAX  /   DESKTOP
 		color: rgba(40,40,40,0.7);
 	}
 	#bio .row .pitch {
-		/* padding-top: 4em; */
-		padding-left: 10%;
-		padding-right: 10%;
+		padding: 0.5em 10%;
 	}
 	#bio .row .pitch p {
 		font-size: 1.3em;
-		/* font-size: 1rem; */
 		/* font-size: large; */
 	}
 
