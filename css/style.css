@@ -726,6 +726,7 @@ PARALLAX  /   DESKTOP
 }
 #span_desktop {
 	cursor: pointer;
+	color: var(--klr_unicorn);
 }
 
 @media (max-width: 768px) { 
