@@ -8,13 +8,13 @@ function loadOrUnloadScript() {
         existingScript = document.getElementById(scriptId),
         maxWidth = 768;
 
-  if (window.innerWidth > maxWidth) {
-    // If the window is wider than maxWidth and the script exists, remove it
+  if (window.innerWidth < maxWidth) {
+    // If the window is smaller than maxWidth and the script exists, remove it
     if (existingScript) {
       existingScript.remove();
     }
   } else {
-    // If the window is not wider than maxWidth and the script does not already exist, add it
+    // If the window is wider than maxWidth and the script does not already exist, add it
     if (!existingScript) {
       const script = document.createElement('script');
       script.id = scriptId;
