@@ -53,12 +53,10 @@ SKROLLR PARALLAX  /  DESKTOP
 }
 
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 	.menu-wrap ul li:nth-child(1),
 	.menu-wrap ul li:nth-child(4),
 	#landing,
-	/* #grid, */
-	/* .skills, */
 	#span_desktop {
 		display: none;
 	}
@@ -143,7 +141,6 @@ SKROLLR PARALLAX  /  DESKTOP
 	}
 	#bio .row .pitch p {
 		font-size: 1.3em;
-		/* font-size: large; */
 	}
 
 	#bio .row .pitch span:hover,
@@ -207,4 +204,4 @@ SKROLLR PARALLAX  /  DESKTOP
 	#links_mobile ul li a h4 {
 		font-size: 0.4em;
 	}
-}
+} */
