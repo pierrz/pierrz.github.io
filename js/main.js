@@ -44,6 +44,13 @@ fetch('./html/bio.html')
 
 // MODERNIZR DISABLES SKROLLR IF TOUCHSCREEN
 if (!Modernizr.touch) {
+  const skrollrCss = document.createElement('link');
+  // skrollrCss.id = 'scrollrCss';
+  skrollrCss.type = 'text/css';
+  skrollrCss.rel = 'stylesheet';
+  skrollrCss.src = 'css/style_skrollr.css';
+  document.head.appendChild(skrollrCss);
+
   skrollr.init();
 }
 
@@ -94,7 +101,7 @@ $(function(){
     const bioTag = document.getElementById('bio-content');
     bioTag.setAttribute('data-scroll-index', '2');
     $.scrollIt({
-      topOffset: -50     // hack to trigger on the last nav (technically, it should be -110)
+      topOffset: -50
     });
   }
 
