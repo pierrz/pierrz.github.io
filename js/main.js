@@ -44,8 +44,8 @@ fetch('./html/bio.html')
 
 // MODERNIZR DISABLES SKROLLR IF TOUCHSCREEN
 if (!Modernizr.touch) {
+  
   const skrollrCss = document.createElement('link');
-  // skrollrCss.id = 'scrollrCss';
   skrollrCss.type = 'text/css';
   skrollrCss.rel = 'stylesheet';
   skrollrCss.href = 'css/style_skrollr.css';
