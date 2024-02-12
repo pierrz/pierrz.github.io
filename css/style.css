@@ -261,6 +261,11 @@ SKROLLR CORE
   	-webkit-filter: grayscale(1);
   	filter: grayscale(1);
 }
+@media (min-width: 768px) {
+	#bio .row .pitch img {
+		margin-bottom: 4rem;
+	}
+}
 
 #bio .row .pitch p {
 	font-size: large;
