@@ -56,10 +56,10 @@ if (!Modernizr.touch) {
   skrollr.init();
 
   // Grid script
-  const gridScript = document.createElement('script');
-  gridScript.type = 'text/javascript';
-  gridScript.src = 'js/grid.js';
-  document.body.appendChild(gridScript);
+  // const gridScript = document.createElement('script');
+  // gridScript.type = 'text/javascript';
+  // gridScript.src = 'js/grid.js';
+  // document.body.appendChild(gridScript);
 
   // ScrollIt
   const bioTag = document.getElementById('bio');

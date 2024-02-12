@@ -47,80 +47,85 @@ fetchData().then(format_data => {
                 elem_question = "<div class='link'><a><i class='fa " + format.icon + " fa-3x'></i><h4>" + format.label + "</h4></a><div class='meta'><p class='title'>" + title + "</p></div></div>";
             
             // DESKTOP only
-            //Create Cell "background"
-            if (
-                id_val == "sk_github"
-                || id_val == "sk_insta"
-                || id_val == "sk_500px"
-                || id_val == "sk_linkedin"
-                || id_val == "sk_resume"
-                || id_val == "sk_mail"
-                || id_val == "sk_behance"
-                || id_val == "sk_muzai"
-                // || id_val == "sk_flickr"
-                // || id_val == "sk_twitter"
-                ) {
-                    $( element ).append( elem_pic )
-                        .find( "img" ).css({  "width": widthWindow,
-                                                "height": "auto",
-                                                "left": pos_left,
-                                                "top": pos_top,
-                                                "z-index": baseZindex + 10 });
-            } 
-            else {    
+            if (!Modernizr.touch) {
+            
+                //Create Cell "background"
+                if (
+                    id_val == "sk_github"
+                    || id_val == "sk_insta"
+                    || id_val == "sk_500px"
+                    || id_val == "sk_linkedin"
+                    || id_val == "sk_resume"
+                    || id_val == "sk_mail"
+                    || id_val == "sk_behance"
+                    || id_val == "sk_muzai"
+                    // || id_val == "sk_flickr"
+                    // || id_val == "sk_twitter"
+                    ) {
+                        $( element ).append( elem_pic )
+                            .find( "img" ).css({  "width": widthWindow,
+                                                    "height": "auto",
+                                                    "left": pos_left,
+                                                    "top": pos_top,
+                                                    "z-index": baseZindex + 10 });
+                } 
+                else {    
+                }
+                
+                //Create Cell meta
+                if (
+                    id_val == "sk_insta"
+                    || id_val == "sk_500px"
+                    || id_val == "sk_muzai"
+                    // || id_val == "sk_flickr"
+                    ) {
+                        $( element ).append( elem_link_min );
+                } else if (id_val == "sk_question") {
+                    $( element ).append( elem_question );
+                } else {
+                    $( element ).append( elem_link );
+                };
+                
+                //Set fullsize for 1st "a" children for each cell (need the connected CSS side)
+                $( ".link" ).css({ 'z-index': baseZindex + 30 });
+                var cellHeight = $( element ).parent( ".row" ).height();
+                $( element ).find( ".link" ).css({"height": cellHeight });
+
+                //Mouse Over cell
+                $( element ).mouseover(function() {
+                        $( this ).find( "img" ).css({ 'z-index': baseZindex + 20 })
+                });
+
+                //Mouse Out cell
+                $( element ).mouseout(function() {
+                        $( this ).find( "img" ).css({ 'z-index': baseZindex + 10 })
+                });
             }
-            
-            //Create Cell meta
-            if (
-                id_val == "sk_insta"
-                || id_val == "sk_500px"
-                || id_val == "sk_muzai"
-                // || id_val == "sk_flickr"
-                ) {
-                    $( element ).append( elem_link_min );
-            } else if (id_val == "sk_question") {
-                $( element ).append( elem_question );
-            } else {
-                $( element ).append( elem_link );
-            };
-            
-            $( ".link" ).css({ 'z-index': baseZindex + 30 });
 
             // MOBILE only
-            // Left column
-            if (
-                id_val == "sk_resume"
-                || id_val == "sk_mail"
-                || id_val == "sk_github"
-                || id_val == "sk_insta"
-                ) {
-                    $( "#bio ul.icon-list-left" ).append( elem_link_mobile );
-            }
-            // Right column
-            else if (
-                id_val == "sk_linkedin"
-                || id_val == "sk_muzai"
-                || id_val == "sk_behance"
-                || id_val == "sk_500px"
-                ) {
-                    $( "#bio ul.icon-list-right" ).append( elem_link_mobile );
-            }
             else {
+                // Left column
+                if (
+                    id_val == "sk_resume"
+                    || id_val == "sk_mail"
+                    || id_val == "sk_github"
+                    || id_val == "sk_insta"
+                    ) {
+                        $( "#bio ul.icon-list-left" ).append( elem_link_mobile );
+                }
+                // Right column
+                else if (
+                    id_val == "sk_linkedin"
+                    || id_val == "sk_muzai"
+                    || id_val == "sk_behance"
+                    || id_val == "sk_500px"
+                    ) {
+                        $( "#bio ul.icon-list-right" ).append( elem_link_mobile );
+                }
+                else {
+                }
             };
 
-            //Set fullsize for 1st "a" children for each cell (need the connected CSS side)
-            var cellHeight = $( element ).parent( ".row" ).height();
-            $( element ).find( ".link" ).css({"height": cellHeight });
-
-            //Mouse Over cell
-            $( element ).mouseover(function() {
-                    $( this ).find( "img" ).css({ 'z-index': baseZindex + 20 })
-            });
-
-            //Mouse Out cell
-            $( element ).mouseout(function() {
-                    $( this ).find( "img" ).css({ 'z-index': baseZindex + 10 })
-            });
         });
 
     } else {
