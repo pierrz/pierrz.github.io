@@ -736,12 +736,9 @@ SKROLLR CORE
 	color: var(--klr_bkgrnd);
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 	.menu-wrap ul li:nth-child(1),
 	.menu-wrap ul li:nth-child(4),
-	/* #landing, */
-	/* #grid, */
-	/* .skills, */
 	#span_desktop {
 		display: none;
 	}
@@ -889,7 +886,7 @@ SKROLLR CORE
 	#links_mobile ul li a h4 {
 		font-size: 0.4em;
 	}
-}
+} */
 
 
 /* TEST */

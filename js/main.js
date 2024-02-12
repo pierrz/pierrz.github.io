@@ -67,8 +67,14 @@ if (!Modernizr.touch) {
 else {
   existingScript.remove();
 
-  const linksMobileTag = document.getElementById('links_mobile');
-  linksMobileTag.style.display = 'block';
+  const touchCss = document.createElement('link');
+  touchCss.type = 'text/css';
+  touchCss.rel = 'stylesheet';
+  touchCss.href = 'css/style_touch.css';
+  document.head.appendChild(touchCss);
+
+  // const linksMobileTag = document.getElementById('links_mobile');
+  // linksMobileTag.style.display = 'block';
 };
 
 
