@@ -8,8 +8,9 @@ SKROLLR PARALLAX  /  DESKTOP
 .skrollr .gap {
 	background: transparent !important;
 }
+#landing,
 #grid {
-    display: none;
+    display: block;
 }
 
 .parallax-image-wrapper {

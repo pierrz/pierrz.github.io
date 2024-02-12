@@ -718,13 +718,14 @@ SKROLLR CORE
 /***********************************************/
 /***********************************************/
 /* MOBILE */
-.menu-wrap ul li:nth-child(3) {
-	display: none;
-}
+.menu-wrap ul li:nth-child(3),
 #links_mobile,
-#span_mobile {
+#span_mobile,
+#landing,
+#grid {
 	display: none;
 }
+
 #bio .row .pitch span#span_desktop {
 	cursor: pointer;
 	color: var(--klr_unicorn);
@@ -738,7 +739,7 @@ SKROLLR CORE
 @media (max-width: 768px) {
 	.menu-wrap ul li:nth-child(1),
 	.menu-wrap ul li:nth-child(4),
-	#landing,
+	/* #landing, */
 	/* #grid, */
 	/* .skills, */
 	#span_desktop {
