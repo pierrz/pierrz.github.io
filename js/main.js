@@ -35,7 +35,8 @@ Script handling how the main components behave
 
 
 // BIO CONTENT
-// issue in mobile (white overlay, all is invisible) related to section size/height probably
+// issue in mobile (white overlay, all is invisible) 
+// related to section size/height and skills probably
 fetch('./html/bio.html')
 .then(response => response.text())
 .then(data => {
@@ -43,38 +44,45 @@ fetch('./html/bio.html')
 });
 
 
-// MODERNIZR DISABLES SKROLLR IF TOUCHSCREEN
-const scriptId = 'gridScript',
-      existingScript = document.getElementById(scriptId);
-
+// MODERNIZR (mobile/desktop subtleties)
 if (!Modernizr.touch) {
   
+  // Skrollr
   const skrollrCss = document.createElement('link');
   skrollrCss.type = 'text/css';
   skrollrCss.rel = 'stylesheet';
   skrollrCss.href = 'css/style_skrollr.css';
   document.head.appendChild(skrollrCss);
-
   skrollr.init();
 
-  const script = document.createElement('script');
-  script.id = scriptId;
-  script.type = 'text/javascript';
-  script.src = 'js/grid.js';
-  document.body.appendChild(script);
+  // Grid script
+  const gridScript = document.createElement('script');
+  gridScript.type = 'text/javascript';
+  gridScript.src = 'js/grid.js';
+  document.body.appendChild(gridScript);
+
+  // ScrollIt
+  const bioTag = document.getElementById('bio');
+  bioTag.setAttribute('data-scroll-index', '2');
+  $.scrollIt({
+    topOffset: -1     // hack to trigger on the last nav (technically, it should be -110)
+  });
 
 }
 else {
-  existingScript.remove();
-
+  //CSS styling for touch-screens
   const touchCss = document.createElement('link');
   touchCss.type = 'text/css';
   touchCss.rel = 'stylesheet';
   touchCss.href = 'css/style_touch.css';
   document.head.appendChild(touchCss);
 
-  // const linksMobileTag = document.getElementById('links_mobile');
-  // linksMobileTag.style.display = 'block';
+  // ScrollIt
+  const bioTag = document.getElementById('bio-content');
+  bioTag.setAttribute('data-scroll-index', '2');
+  $.scrollIt({
+    topOffset: -50
+  });
 };
 
 
@@ -108,25 +116,25 @@ $(document).ready(function() {
 
 
 // SCROLLIT TRIGGER 
-$(function(){
+// $(function(){
   
-  // desktop
-  // if (window.innerWidth > maxWidth) {
-  if (!Modernizr.touch) {
-    const bioTag = document.getElementById('bio');
-    bioTag.setAttribute('data-scroll-index', '2');
-    $.scrollIt({
-      topOffset: -1     // hack to trigger on the last nav (technically, it should be -110)
-    });
-  }
+//   // desktop
+//   // if (window.innerWidth > maxWidth) {
+//   if (!Modernizr.touch) {
+//     const bioTag = document.getElementById('bio');
+//     bioTag.setAttribute('data-scroll-index', '2');
+//     $.scrollIt({
+//       topOffset: -1     // hack to trigger on the last nav (technically, it should be -110)
+//     });
+//   }
 
-  // mobile
-  else {
-    const bioTag = document.getElementById('bio-content');
-    bioTag.setAttribute('data-scroll-index', '2');
-    $.scrollIt({
-      topOffset: -50
-    });
-  }
+//   // mobile
+//   else {
+//     const bioTag = document.getElementById('bio-content');
+//     bioTag.setAttribute('data-scroll-index', '2');
+//     $.scrollIt({
+//       topOffset: -50
+//     });
+//   }
 
-});
+// });
