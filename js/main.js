@@ -68,7 +68,7 @@ else {
   existingScript.remove();
 
   const linksMobileTag = document.getElementById('links_mobile');
-  linksMobileTag.style.display('block');
+  linksMobileTag.style.display = 'block';
 };
 
 
