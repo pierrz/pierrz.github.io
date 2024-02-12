@@ -105,7 +105,8 @@ $(document).ready(function() {
 $(function(){
   
   // desktop
-  if (window.innerWidth > maxWidth) {
+  // if (window.innerWidth > maxWidth) {
+  if (!Modernizr.touch) {
     const bioTag = document.getElementById('bio');
     bioTag.setAttribute('data-scroll-index', '2');
     $.scrollIt({
