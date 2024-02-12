@@ -716,6 +716,10 @@ PARALLAX  /   DESKTOP
 	width: 100%;
 }
 
+.skills {
+	display: none;
+}
+
 
 /***********************************************/
 /***********************************************/
@@ -742,7 +746,7 @@ PARALLAX  /   DESKTOP
 	.menu-wrap ul li:nth-child(4),
 	#landing,
 	#grid,
-	.skills,
+	/* .skills, */
 	#span_desktop {
 		display: none;
 	}
