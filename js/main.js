@@ -2,35 +2,36 @@
 Script handling how the main components behave
 */
 
-const maxWidth = 768;
+// const maxWidth = 768;
 
 
 // ENABLED (or not) GRID
-function loadOrUnloadScript() {
+// function loadOrUnloadScript() {
   
-  const scriptId = 'gridScript',
-        existingScript = document.getElementById(scriptId);
+//   const scriptId = 'gridScript',
+//         existingScript = document.getElementById(scriptId);
 
-  if (window.innerWidth < maxWidth) {
-    // If the window is smaller than maxWidth and the script exists, remove it
-    if (existingScript) {
-      existingScript.remove();
-    }
-  } 
-  else {
-    // If the window is wider than maxWidth and the script does not already exist, add it
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.type = 'text/javascript';
-      script.src = 'js/grid.js';
-      document.body.appendChild(script);
-    }
-  }
-};
+//   if (window.innerWidth < maxWidth) {
+//     // If the window is smaller than maxWidth and the script exists, remove it
+//     if (existingScript) {
+//       existingScript.remove();
+//     }
+//   } 
+//   else {
+//     // If the window is wider than maxWidth and the script does not already exist, add it
+//     if (!existingScript) {
+//       const script = document.createElement('script');
+//       script.id = scriptId;
+//       script.type = 'text/javascript';
+//       script.src = 'js/grid.js';
+//       document.body.appendChild(script);
+//     }
+//   }
+// };
 
-loadOrUnloadScript();                                     // Run when the page loads
-window.addEventListener('resize', loadOrUnloadScript);    // Re-check whenever the window is resized
+// loadOrUnloadScript();                                     // Run when the page loads
+// window.addEventListener('resize', loadOrUnloadScript);    // Re-check whenever the window is resized
+
 
 
 // BIO CONTENT
@@ -43,6 +44,9 @@ fetch('./html/bio.html')
 
 
 // MODERNIZR DISABLES SKROLLR IF TOUCHSCREEN
+const scriptId = 'gridScript',
+      existingScript = document.getElementById(scriptId);
+
 if (!Modernizr.touch) {
   
   const skrollrCss = document.createElement('link');
@@ -52,7 +56,20 @@ if (!Modernizr.touch) {
   document.head.appendChild(skrollrCss);
 
   skrollr.init();
+
+  const script = document.createElement('script');
+  script.id = scriptId;
+  script.type = 'text/javascript';
+  script.src = 'js/grid.js';
+  document.body.appendChild(script);
+
 }
+else {
+  existingScript.remove();
+
+  const linksMobileTag = document.getElementById('links_mobile');
+  linksMobileTag.style.display('block');
+};
 
 
 // ANIMSITION PARAMETERS
