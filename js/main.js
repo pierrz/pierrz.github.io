@@ -48,7 +48,7 @@ if (!Modernizr.touch) {
   // skrollrCss.id = 'scrollrCss';
   skrollrCss.type = 'text/css';
   skrollrCss.rel = 'stylesheet';
-  skrollrCss.src = 'css/style_skrollr.css';
+  skrollrCss.href = 'css/style_skrollr.css';
   document.head.appendChild(skrollrCss);
 
   skrollr.init();
