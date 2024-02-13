@@ -73,3 +73,26 @@ $(document).ready(function() {
         transition: function(url){ window.location.href = url; }
     });
 });
+
+
+window.addEventListener('scroll', function() {
+    const menuLink = document.getElementById('open-button');
+    const specialSection = document.getElementById('bio');
+    
+    // Get the position of the section
+    const sectionTop = specialSection.offsetTop;
+    const sectionHeight = specialSection.offsetHeight;
+    
+    // Get the scroll position
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    
+    // Check if the specialSection is in view
+    if (scrollPosition + window.innerHeight > sectionTop && scrollPosition < sectionTop + sectionHeight) {
+      // Add class to change color
+      menuLink.style.color = "var(--klr_unicorn)"
+    } else {
+      // Remove class to revert color
+      menuLink.style.color = "var(--klr_bkgrnd)"
+    }
+  });
+  
