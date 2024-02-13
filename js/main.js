@@ -107,8 +107,8 @@ window.addEventListener('scroll', function() {
 
     } 
     else {
-      menuButton.style.color = "var(--klr_bkgrnd)"
-      logo.style.color = "var(--klr_bkgrnd)"
+      menuButton.style.color = ""
+      logo.style.color = ""
     }
 
     if (scrollPosition > bioBottom ) {
