@@ -455,7 +455,8 @@ a:hover > i.material-icons {
 	color: var(--klr_shade2);
 } */
 
-.menu-button:hover {
+.menu-button:hover,
+.show-menu .menu-button:hover {
 	/* color: var(--klr_unicorn); */
 	color: var(--klr_shade2);
 	background: var(--klr_bkgrnd);	
@@ -479,7 +480,8 @@ a:hover > i.material-icons {
 #logo {
 	position: fixed;
 	right: 0;
-	padding: 45px 35px;
+	top: -7px;
+	/* padding: 45px 35px; */
 	font-size: 1em;
 	letter-spacing: 1px;
 	margin: 0;
@@ -488,7 +490,7 @@ a:hover > i.material-icons {
 	z-index: 2020;
 	/* desktop specific */
 	font-size: 1.3em;
-	padding: 38px;
+	/* padding: 38px; */
 }
 #logo a {
 	color: var(--klr_bkgrnd);
