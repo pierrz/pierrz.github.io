@@ -76,41 +76,33 @@ $(document).ready(function() {
 
 
 window.addEventListener('scroll', function() {
+    // html elements
     const menuButton = document.querySelector('.menu-button'),
-            showMenuButton = document.querySelector('.show-menu .menu-button'),
             logo = document.getElementById('logo'),
             landingSection = document.getElementById('landing'),
             bioSection = document.getElementById('bio'),
             gridSection = document.getElementById('grid');
     
-    // Get the position of the section
+    // scrolled positions
     const landingTop = landingSection.offsetTop,
             landingBottom = landingTop + landingSection.offsetHeight,
             bioTop = bioSection.offsetTop,
             bioBottom = bioTop + bioSection.offsetHeight,
             gridTop = gridSection.offsetTop,
-            gridBottom = gridTop + gridSection.offsetHeight;
+            gridBottom = gridTop + gridSection.offsetHeight,
+            scrollPosition = window.scrollY || document.documentElement.scrollTop;
     
-    // Get the scroll position
-    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-    
-    // Check if the specialSection has completely left the viewport
-    // if (scrollPosition + window.innerHeight >= bioTop && scrollPosition < bioBottom) {
+    // change stying only for bio section
     if (scrollPosition >= bioTop && scrollPosition <= bioBottom ) {
-      menuButton.style.color = "var(--klr_shade1)"
-      logo.style.color = "var(--klr_shade1)"
-
-    //   menuButton.addEventListener('mouseenter', function() {
-    //     // This is where you apply the hover style
-    //     this.style.color = "var(--klr_shade1)"; // Example of changing the text color
-    //   });
-
+      menuButton.style.color = "var(--klr_shade2)"
+      logo.style.color = "var(--klr_shade2)"
     } 
     else {
       menuButton.style.color = ""
       logo.style.color = ""
     }
 
+    // logo disapears after bio section
     if (scrollPosition > bioBottom ) {
         logo.style.display = "none"
     }
