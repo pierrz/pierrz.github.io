@@ -93,12 +93,11 @@ window.addEventListener('scroll', function() {
     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
     
     // Check if the specialSection has completely left the viewport
-    if (scrollPosition + window.innerHeight >= bioTop && scrollPosition < bioBottom) {
-      // Add class to change color
+    // if (scrollPosition + window.innerHeight >= bioTop && scrollPosition < bioBottom) {
+    if (scrollPosition >= bioTop && scrollPosition <= bioBottom ) {
       menuButton.style.color = "var(--klr_shade1)"
     } 
-    else if (scrollPosition + window.innerHeight > gridTop) {
-      // Remove class to revert color
+    else {
       menuButton.style.color = "var(--klr_bkgrnd)"
     }
   });
