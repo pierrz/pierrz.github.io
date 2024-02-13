@@ -76,7 +76,7 @@ $(document).ready(function() {
 
 
 window.addEventListener('scroll', function() {
-    const menuButton = document.getElementById('open-button'),
+    const menuButton = document.querySelector('.menu-button'),
             landingSection = document.getElementById('landing'),
             bioSection = document.getElementById('bio'),
             gridSection = document.getElementById('grid');
