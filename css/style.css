@@ -528,7 +528,7 @@ a:hover > i.material-icons {
 }
 .icon-list li a span {
 	display: block;
-	opacity: 0;
+	opacity: 0.5;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-size: 1em;
@@ -547,7 +547,7 @@ a:hover > i.material-icons {
 	color: var(--klr_unicorn);
 }
 .icon-list li a:hover span {
-	opacity: 0.5;
+	opacity: 0.7;
 	color: var(--klr_unicorn);
 }	
 
@@ -581,7 +581,7 @@ a:hover > i.material-icons {
 	-webkit-transition: all 0.4s;
 	transition: all 0.4s;
 }
-.show-menu .icon-list a:nth-child(2) {
+/* .show-menu .icon-list a:nth-child(2) {
 	-webkit-transition-delay: 0.42s;
 	transition-delay: 0.42s;
 }
@@ -604,7 +604,7 @@ a:hover > i.material-icons {
 .show-menu .icon-list a:nth-child(6) {
 	-webkit-transition-delay: 0.5s;
 	transition-delay: 0.5s;
-}
+} */
 
 
 /* ============================================================ */
@@ -617,8 +617,6 @@ a:hover > i.material-icons {
 #span_mobile {
 	display: none;
 }
-/* #landing, */
-/* #grid  */
 
 #bio .row .pitch span#span_desktop {
 	cursor: pointer;
