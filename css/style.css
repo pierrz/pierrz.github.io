@@ -340,7 +340,7 @@ a:hover > i.material-icons {
 } 
 .gridCell p {
 	text-align: right;
-	color: rgba(40,40,40,0.8);
+	color: var(--klr_shade1);
 }
 .gridCell p.title {
 	padding-top: 0.3em;
@@ -518,17 +518,17 @@ a:hover > i.material-icons {
 }*/
 .icon-list li a {
 	width: 8%;
-	opacity: 1;
+	/* opacity: 1; */
 	display: inline-block;
 	padding: 0 15px;
 	text-decoration: none;
 	font-size: 1.5em;
-	color: rgba(40,40,40,0.5);
+	/* color: rgba(40,40,40,0.5); */
 	background: var(--klr_bkgrnd);
 }
 .icon-list li a span {
 	display: block;
-	opacity: 0.5;
+	/* opacity: 0.5; */
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-size: 1em;
@@ -541,6 +541,11 @@ a:hover > i.material-icons {
 	font-size: 32px;
 }
 
+.icon-list li a,
+.icon-list li a span {
+	/* opacity: 1; */
+	color: var(--klr_shade3);
+}
 .icon-list li.active a,
 .icon-list li.active a span {
 	opacity: 1;
