@@ -14,11 +14,11 @@ fetch('./html/bio.html')
 if (!Modernizr.touch) {
   
     // Skrollr
-    const skrollrCss = document.createElement('link');
-    skrollrCss.type = 'text/css';
-    skrollrCss.rel = 'stylesheet';
-    skrollrCss.href = 'css/style_skrollr.css';
-    document.head.appendChild(skrollrCss);
+    // const skrollrCss = document.createElement('link');
+    // skrollrCss.type = 'text/css';
+    // skrollrCss.rel = 'stylesheet';
+    // skrollrCss.href = 'css/style_skrollr.css';
+    // document.head.appendChild(skrollrCss);
     skrollr.init();
 
     // ScrollIt
@@ -41,7 +41,7 @@ else {
     const bioTag = document.getElementById('bio-content');
     bioTag.setAttribute('data-scroll-index', '2');
     $.scrollIt({
-      topOffset: -50
+      topOffset: -55
     });
 };
 
