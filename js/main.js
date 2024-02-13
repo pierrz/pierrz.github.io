@@ -77,17 +77,17 @@ $(document).ready(function() {
 
 window.addEventListener('scroll', function() {
     const menuLink = document.getElementById('open-button');
-    const specialSection = document.getElementById('bio');
+    const specialSection = document.getElementById('landing');
     
     // Get the position of the section
     const sectionTop = specialSection.offsetTop;
-    const sectionHeight = specialSection.offsetHeight;
+    const sectionBottom = sectionTop + specialSection.offsetHeight;
     
     // Get the scroll position
     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
     
-    // Check if the specialSection is in view
-    if (scrollPosition + window.innerHeight > sectionTop && scrollPosition < sectionTop + sectionHeight) {
+    // Check if the specialSection has completely left the viewport
+    if (scrollPosition > sectionBottom) {
       // Add class to change color
       menuLink.style.color = "var(--klr_unicorn)"
     } else {
