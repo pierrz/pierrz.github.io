@@ -3,8 +3,6 @@ Script handling how the main components behave
 */
 
 // BIO CONTENT
-// issue in mobile (white overlay, all is invisible) 
-// related to section size/height and skills probably
 fetch('./html/bio.html')
 .then(response => response.text())
 .then(data => {
@@ -64,7 +62,7 @@ $(document).ready(function() {
         loadingClass: 'animsition-loading',
         loadingInner: '', // e.g '<img src="loading.svg" />'
         timeout: true,
-        timeoutCountdown: 2000,
+        timeoutCountdown: 2500,
         onLoadEvent: true,
         browser: [ 'animation-duration', '-webkit-animation-duration'],
         // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
