@@ -541,20 +541,20 @@ a:hover > i.material-icons {
 	font-size: 32px;
 }
 
-.icon-list li a,
+.icon-list li a > i.material-icons,
 .icon-list li a span {
 	/* opacity: 1; */
 	color: var(--klr_shade3);
 }
-.icon-list li.active a,
+.icon-list li.active a > i.material-icons,
 .icon-list li.active a span {
 	/* opacity: 1; */
 	color: var(--klr_unicorn);
 }
-.icon-list li a:hover,
+.icon-list li a:hover > i.material-icons,
 .icon-list li a:hover span {
 	/* opacity: 0.7; */
-	color: var(--klr_shade2);
+	color: var(--klr_shade);
 }	
 
 /***********************************************/
@@ -581,9 +581,9 @@ a:hover > i.material-icons {
 /***********************************************/
 /* ANIMATION TIMINGS */
 /***********************************************/
-.show-menu .icon-list:hover a,
-.show-menu .icon-list a:hover,
-.show-menu .icon-list a:focus,
+.show-menu .icon-list:hover a > i.material-icons,
+.show-menu .icon-list a:hover > i.material-icons,
+.show-menu .icon-list a:focus > i.material-icons,
 .show-menu .icon-list:hover a span,
 .show-menu .icon-list a:hover span,
 .show-menu .icon-list a:focus span {
