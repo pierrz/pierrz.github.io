@@ -451,10 +451,6 @@ a:hover > i.material-icons {
 .menu-button:focus {
 	outline: none;
 }
-.show-menu .menu-button,
-.show-menu .menu-button:focus {
-	color: var(--klr_shade3);
-}
 /* .show-menu .menu-button:hover {
 	color: var(--klr_shade2);
 } */
@@ -465,6 +461,11 @@ a:hover > i.material-icons {
 	background: var(--klr_bkgrnd);	
 	border-radius: 0;
 }
+.show-menu .menu-button,
+.show-menu .menu-button:focus {
+	color: var(--klr_shade3);
+}
+
 .menu-button .fa-bars {
 	display: inherit;
 }
