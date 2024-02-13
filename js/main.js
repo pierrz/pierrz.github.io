@@ -87,17 +87,17 @@ window.addEventListener('scroll', function() {
             bioTop = bioSection.offsetTop,
             bioBottom = bioTop + bioSection.offsetHeight,
             gridTop = gridSection.offsetTop,
-            gridBottom = gridTop + bioSection.offsetHeight;
+            gridBottom = gridTop + gridSection.offsetHeight;
     
     // Get the scroll position
     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
     
     // Check if the specialSection has completely left the viewport
-    if (landingBottom < scrollPosition < bioBottom) {
+    if (scrollPosition + window.innerHeight >= bioTop && scrollPosition < bioBottom) {
       // Add class to change color
       menuButton.style.color = "var(--klr_shade1)"
     } 
-    else if (gridTop < scrollPosition) {
+    else if (scrollPosition + window.innerHeight > gridTop) {
       // Remove class to revert color
       menuButton.style.color = "var(--klr_bkgrnd)"
     }
