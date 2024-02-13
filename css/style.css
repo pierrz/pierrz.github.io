@@ -547,8 +547,11 @@ a:hover > i.material-icons {
 	color: var(--klr_shade3);
 }
 .icon-list li.active a > i.material-icons,
-.icon-list li.active a span {
+.icon-list li.active a span,
+.icon-list li.active a:hover > i.material-icons,
+.icon-list li.active a:hover span {
 	/* opacity: 1; */
+	cursor: default;
 	color: var(--klr_unicorn);
 }
 .icon-list li a:hover > i.material-icons,
