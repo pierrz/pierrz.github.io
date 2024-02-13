@@ -78,7 +78,7 @@ $(document).ready(function() {
 window.addEventListener('scroll', function() {
     // html elements
     const menuButton = document.querySelector('.menu-button'),
-            logo = document.getElementById('logo').getElementsByTagName('a'),
+            logo = document.getElementById('logo').getElementsByTagName('a')[0],
             landingSection = document.getElementById('landing'),
             bioSection = document.getElementById('bio'),
             gridSection = document.getElementById('grid');
