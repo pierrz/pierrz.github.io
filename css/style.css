@@ -455,12 +455,13 @@ a:hover > i.material-icons {
 .show-menu .menu-button:focus {
 	color: var(--klr_shade3);
 }
-.show-menu .menu-button:hover {
+/* .show-menu .menu-button:hover {
 	color: var(--klr_shade2);
-}
+} */
 
 .menu-button:hover {
-	color: var(--klr_unicorn);
+	/* color: var(--klr_unicorn); */
+	color: var(--klr_shade2);
 	background: var(--klr_bkgrnd);	
 	border-radius: 0;
 }
