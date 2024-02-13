@@ -76,23 +76,30 @@ $(document).ready(function() {
 
 
 window.addEventListener('scroll', function() {
-    const menuLink = document.getElementById('open-button');
-    const specialSection = document.getElementById('landing');
+    const menuButton = document.getElementById('open-button'),
+            landingSection = document.getElementById('landing'),
+            bioSection = document.getElementById('bio'),
+            gridSection = document.getElementById('grid');
     
     // Get the position of the section
-    const sectionTop = specialSection.offsetTop;
-    const sectionBottom = sectionTop + specialSection.offsetHeight;
+    const landingTop = landingSection.offsetTop,
+            landingBottom = landingTop + landingSection.offsetHeight,
+            bioTop = bioSection.offsetTop,
+            bioBottom = bioTop + bioSection.offsetHeight,
+            gridTop = gridSection.offsetTop,
+            gridBottom = gridTop + bioSection.offsetHeight;
     
     // Get the scroll position
     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
     
     // Check if the specialSection has completely left the viewport
-    if (scrollPosition > sectionBottom) {
+    if (landingBottom < scrollPosition < bioBottom) {
       // Add class to change color
-      menuLink.style.color = "var(--klr_unicorn)"
-    } else {
+      menuButton.style.color = "var(--klr_shade1)"
+    } 
+    else if (gridTop < scrollPosition) {
       // Remove class to revert color
-      menuLink.style.color = "var(--klr_bkgrnd)"
+      menuButton.style.color = "var(--klr_bkgrnd)"
     }
   });
   

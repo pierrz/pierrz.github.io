@@ -480,6 +480,7 @@ a:hover > i.material-icons {
 	margin: 0;
 	text-transform: uppercase;
 	text-align: right;
+	z-index: 2020;
 	/* desktop specific */
 	font-size: 1.3em;
 	padding: 38px;
