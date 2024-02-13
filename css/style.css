@@ -451,11 +451,11 @@ a:hover > i.material-icons {
 .menu-button:focus {
 	outline: none;
 }
-.show-menu .menu-button,
+/* .show-menu .menu-button,
 .show-menu .menu-button:focus {
 	color: var(--klr_unicorn);
-}
-.menu-button:hover,
+} */
+
 .menu-button:hover {
 	color: var(--klr_unicorn);
 	background: var(--klr_bkgrnd);	

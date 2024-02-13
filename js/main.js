@@ -77,6 +77,8 @@ $(document).ready(function() {
 
 window.addEventListener('scroll', function() {
     const menuButton = document.querySelector('.menu-button'),
+            showMenuButton = document.querySelector('.show-menu .menu-button'),
+            logo = document.getElementById('logo'),
             landingSection = document.getElementById('landing'),
             bioSection = document.getElementById('bio'),
             gridSection = document.getElementById('grid');
@@ -96,9 +98,22 @@ window.addEventListener('scroll', function() {
     // if (scrollPosition + window.innerHeight >= bioTop && scrollPosition < bioBottom) {
     if (scrollPosition >= bioTop && scrollPosition <= bioBottom ) {
       menuButton.style.color = "var(--klr_shade1)"
+      logo.style.color = "var(--klr_shade1)"
+
+    //   menuButton.addEventListener('mouseenter', function() {
+    //     // This is where you apply the hover style
+    //     this.style.color = "var(--klr_shade1)"; // Example of changing the text color
+    //   });
+
     } 
     else {
       menuButton.style.color = "var(--klr_bkgrnd)"
+      logo.style.color = "var(--klr_bkgrnd)"
     }
+
+    if (scrollPosition > bioBottom ) {
+        logo.style.display = "none"
+    }
+
   });
   
