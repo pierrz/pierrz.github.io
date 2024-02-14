@@ -97,25 +97,43 @@ window.addEventListener('scroll', function() {
       menuButton.style.color = "var(--klr_shade3)"
       logo.style.color = "var(--klr_shade3)"
 
-      menuButton.addEventListener('mouseenter', function() {
-        this.style.color = "";
-      });
-      logo.addEventListener('mouseenter', function() {
-        this.style.color = "";
-      });
+    //   menuButton.addEventListener('mouseenter', function() {
+    //     this.style.color = "";
+    //   });
+    //   logo.addEventListener('mouseenter', function() {
+    //     this.style.color = "";
+    //   });
       menuButton.addEventListener('mouseleave', function() {
         this.style.color = "var(--klr_shade3)";
       });
       logo.addEventListener('mouseleave', function() {
         this.style.color = "var(--klr_shade3)";
       });
-
-
+    
     } 
     else {
-      menuButton.style.color = ""
-      logo.style.color = ""
+      menuButton.style.color = "var(--klr_bkgrnd)"
+      logo.style.color = "var(--klr_bkgrnd)"
+      menuButton.addEventListener('mouseleave', function() {
+        this.style.color = "var(--klr_bkgrnd)";
+        });
+        logo.addEventListener('mouseleave', function() {
+            this.style.color = "var(--klr_bkgrnd)";
+        });
     }
+
+    menuButton.addEventListener('mouseenter', function() {
+        this.style.color = "var(--klr_shade2)";
+      });
+    logo.addEventListener('mouseenter', function() {
+        this.style.color = "var(--klr_shade2)";
+    });
+    // menuButton.addEventListener('mouseleave', function() {
+    //     this.style.color = "var(--klr_shade3)";
+    // });
+    // logo.addEventListener('mouseleave', function() {
+    //     this.style.color = "var(--klr_shade3)";
+    // });
     
     // logo disapears below bio section
     if (scrollPosition >= bioBottom ) {

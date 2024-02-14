@@ -445,7 +445,7 @@ a:hover > i.material-icons {
 .menu-button,
 .menu-button:focus {
 	border: none;
-	color: var(--klr_bkgrnd);
+	/* color: var(--klr_bkgrnd); */
 	outline-style: none;
 }
 .menu-button:focus {
@@ -458,9 +458,8 @@ a:hover > i.material-icons {
 .menu-button:hover,
 .show-menu .menu-button:hover,
 .show-menu .menu-button:focus {
-	/* color: var(--klr_unicorn); */
-	color: var(--klr_shade2);
-	background: var(--klr_bkgrnd);	
+	/* color: var(--klr_shade2);
+	background: var(--klr_bkgrnd);	 */
 	border-radius: 0;
 }
 /* .show-menu .menu-button,
@@ -493,14 +492,14 @@ a:hover > i.material-icons {
 	font-size: 1.3em;
 	/* padding: 38px; */
 }
-#logo a {
+/* #logo a {
 	color: var(--klr_bkgrnd);
-}
+} */
 #logo a:hover {
 	text-decoration: none;
 	/* color: var(--klr_unicorn); */
-	color: var(--klr_shade2);
-	background: var(--klr_bkgrnd);
+	/* color: var(--klr_shade2);
+	background: var(--klr_bkgrnd); */
 }
 
 /***********************************************/
