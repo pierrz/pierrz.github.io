@@ -96,15 +96,27 @@ window.addEventListener('scroll', function() {
     if (scrollPosition >= bioTop && scrollPosition <= bioBottom ) {
       menuButton.style.color = "var(--klr_shade3)"
       logo.style.color = "var(--klr_shade3)"
+
+      menuButton.addEventListener('mouseenter', function() {
+        this.style.color = "";
+      });
+      logo.addEventListener('mouseenter', function() {
+        this.style.color = "";
+      });
+
+
     } 
     else {
       menuButton.style.color = ""
       logo.style.color = ""
     }
-
-    // logo disapears after bio section
+    
+    // logo disapears below bio section
     if (scrollPosition >= bioBottom ) {
         logo.style.display = "none"
+    }
+    else {
+        logo.style.display = ""
     }
 
   });
