@@ -94,8 +94,8 @@ window.addEventListener('scroll', function() {
     
     // change stying only for bio section
     if (scrollPosition >= bioTop && scrollPosition <= bioBottom ) {
-      menuButton.style.color = "var(--klr_shade2)"
-      logo.style.color = "var(--klr_shade2)"
+      menuButton.style.color = "var(--klr_shade3)"
+      logo.style.color = "var(--klr_shade3)"
     } 
     else {
       menuButton.style.color = ""
@@ -103,7 +103,7 @@ window.addEventListener('scroll', function() {
     }
 
     // logo disapears after bio section
-    if (scrollPosition > bioBottom ) {
+    if (scrollPosition >= bioBottom ) {
         logo.style.display = "none"
     }
 

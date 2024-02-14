@@ -479,8 +479,8 @@ a:hover > i.material-icons {
 /***********************************************/
 #logo {
 	position: fixed;
-	right: 0;
-	top: -7px;
+	right: 38px;
+	top: 38px;
 	/* padding: 45px 35px; */
 	font-size: 1em;
 	letter-spacing: 1px;
