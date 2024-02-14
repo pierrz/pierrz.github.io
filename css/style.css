@@ -456,16 +456,17 @@ a:hover > i.material-icons {
 } */
 
 .menu-button:hover,
-.show-menu .menu-button:hover {
+.show-menu .menu-button:hover,
+.show-menu .menu-button:focus {
 	/* color: var(--klr_unicorn); */
 	color: var(--klr_shade2);
 	background: var(--klr_bkgrnd);	
 	border-radius: 0;
 }
-.show-menu .menu-button,
+/* .show-menu .menu-button,
 .show-menu .menu-button:focus {
 	color: var(--klr_shade3);
-}
+} */
 
 .menu-button .fa-bars {
 	display: inherit;
@@ -487,7 +488,7 @@ a:hover > i.material-icons {
 	margin: 0;
 	text-transform: uppercase;
 	text-align: right;
-	z-index: 2020;
+	z-index: 2000;
 	/* desktop specific */
 	font-size: 1.3em;
 	/* padding: 38px; */
@@ -499,6 +500,7 @@ a:hover > i.material-icons {
 	text-decoration: none;
 	/* color: var(--klr_unicorn); */
 	color: var(--klr_shade2);
+	background: var(--klr_bkgrnd);
 }
 
 /***********************************************/

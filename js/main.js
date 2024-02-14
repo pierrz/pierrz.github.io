@@ -103,6 +103,12 @@ window.addEventListener('scroll', function() {
       logo.addEventListener('mouseenter', function() {
         this.style.color = "";
       });
+      menuButton.addEventListener('mouseleave', function() {
+        this.style.color = "var(--klr_shade3)";
+      });
+      logo.addEventListener('mouseleave', function() {
+        this.style.color = "var(--klr_shade3)";
+      });
 
 
     } 
