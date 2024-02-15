@@ -508,6 +508,8 @@ a:hover > i.material-icons {
 .tuned_top {
 	color: var(--klr_shade3);
 }
+
+.show-menu .hovered,
 .hovered {
 	color: var(--klr_shade2);
 	background: var(--klr_bkgrnd);
