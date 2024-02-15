@@ -97,14 +97,14 @@
 
 		menuButton.classList.add('default_top');
 		logo.classList.add('default_top');
-		if (scrollPosition < bioTop ) {
-			logo.addEventListener('mouseenter', function() {
-				this.style.color = 'var(--klr_unicorn)';
-			});
-			logo.addEventListener('mouseleave', function() {
-				this.style.color = '';
-			});
-		};
+		// if (scrollPosition < bioTop ) {
+		// 	logo.addEventListener('mouseenter', function() {
+		// 		this.style.color = 'var(--klr_unicorn)';
+		// 	});
+		// 	logo.addEventListener('mouseleave', function() {
+		// 		this.style.color = '';
+		// 	});
+		// };
 	};
 	
 	landingDefault()
