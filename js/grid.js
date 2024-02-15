@@ -10,8 +10,8 @@ async function fetchData() {
 }
 
 // Grid creation funtion, calling fetchData 1st and then using its data
-fetchData().then(format_data => {
-    if (format_data) {
+fetchData().then( grid_parameters => {
+    if (grid_parameters) {
 
         //Main variables                            
         var baseUrl = "assets/backgrounds/",
@@ -20,7 +20,7 @@ fetchData().then(format_data => {
             // mob_baseUrl = baseUrl + "mob/",
             baseZindex = 1000;
 
-        jQuery.each(format_data, function(id_val, format) {
+        jQuery.each(grid_parameters, function(id_val, format) {
             
             //Picture dimensions/position/elements
             var widthWindow = window.innerWidth * 1.1,

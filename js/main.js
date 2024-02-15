@@ -23,7 +23,7 @@ async function fetchHtml() {
 // MODERNIZR (desktop/mobile subtleties)
 // const furtherTag = document.getElementById('span_further');
 // var furtherTagScrollIndex;
-fetchHtml().then(htmlContent => {
+fetchHtml().then( htmlContent => {
 
     document.getElementById('bio-content').innerHTML = htmlContent;
     const furtherTag = document.getElementById('span_further');
@@ -85,10 +85,6 @@ fetchHtml().then(htmlContent => {
 
 // ANIMSITION PARAMETERS
 $(document).ready(function() {
-    
-    const furtherTag = document.getElementById('span_further');
-    furtherTag.setAttribute('data-scroll-index', furtherTagScrollIndex);
-
     $(".animsition").animsition({
         // Transition Type
         inClass: 'fade-in',
