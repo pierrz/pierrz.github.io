@@ -92,10 +92,16 @@ window.addEventListener('scroll', function() {
             gridBottom = gridTop + gridSection.offsetHeight,
             scrollPosition = window.scrollY || document.documentElement.scrollTop;
     
+    menuButton.classList.add('default_top');
+    logo.classList.add('default_top');
     // change stying only for bio section
     if (scrollPosition >= bioTop && scrollPosition <= bioBottom ) {
-      menuButton.style.color = "var(--klr_shade3)"
-      logo.style.color = "var(--klr_shade3)"
+      menuButton.classList.remove('default_top');
+      logo.classList.remove('default_top');
+      menuButton.classList.add('tuned_top');
+      logo.classList.add('tuned_top');
+      // menuButton.style.color = "var(--klr_shade3)"
+      // logo.style.color = "var(--klr_shade3)"
 
     //   menuButton.addEventListener('mouseenter', function() {
     //     this.style.color = "";
@@ -103,30 +109,40 @@ window.addEventListener('scroll', function() {
     //   logo.addEventListener('mouseenter', function() {
     //     this.style.color = "";
     //   });
-      menuButton.addEventListener('mouseleave', function() {
-        this.style.color = "var(--klr_shade3)";
-      });
-      logo.addEventListener('mouseleave', function() {
-        this.style.color = "var(--klr_shade3)";
-      });
+      // menuButton.addEventListener('mouseleave', function() {
+      //   this.classList.remove('hovered');
+      //   // this.style.color = "var(--klr_shade3)";
+      // });
+      // logo.addEventListener('mouseleave', function() {
+      //   this.classList.remove('hovered');
+      //   // this.style.color = "var(--klr_shade3)";
+      // });
     
     } 
-    else {
-      menuButton.style.color = "var(--klr_bkgrnd)"
-      logo.style.color = "var(--klr_bkgrnd)"
-      menuButton.addEventListener('mouseleave', function() {
-        this.style.color = "var(--klr_bkgrnd)";
-        });
-        logo.addEventListener('mouseleave', function() {
-            this.style.color = "var(--klr_bkgrnd)";
-        });
-    }
+    // else {
+    //   menuButton.style.color = "var(--klr_bkgrnd)"
+    //   logo.style.color = "var(--klr_bkgrnd)"
+    //   menuButton.addEventListener('mouseleave', function() {
+    //     this.classList.remove('hovered');
+    //     // this.style.color = "var(--klr_bkgrnd)";
+    //     });
+    //     logo.addEventListener('mouseleave', function() {
+    //       this.classList.remove('hovered');
+    //         // this.style.color = "var(--klr_bkgrnd)";
+    //     });
+    // }
 
     menuButton.addEventListener('mouseenter', function() {
-        this.style.color = "var(--klr_shade2)";
-      });
+      this.classList.add('hovered');
+    });
     logo.addEventListener('mouseenter', function() {
-        this.style.color = "var(--klr_shade2)";
+      this.classList.add('hovered');
+    });
+    menuButton.addEventListener('mouseleave', function() {
+      this.classList.remove('hovered');
+    });
+    logo.addEventListener('mouseleave', function() {
+      this.classList.remove('hovered');
     });
     // menuButton.addEventListener('mouseleave', function() {
     //     this.style.color = "var(--klr_shade3)";

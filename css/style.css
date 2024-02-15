@@ -502,6 +502,16 @@ a:hover > i.material-icons {
 	background: var(--klr_bkgrnd); */
 }
 
+.default_top {
+	color: var(--klr_bkgrnd);
+}
+.tuned_top {
+	color: var(--klr_shade3);
+}
+.hovered {
+	color: var(--klr_shade2);
+	background: var(--klr_bkgrnd);
+}
 /***********************************************/
 /* ICONS */
 /***********************************************/
