@@ -32,8 +32,18 @@
 #logo a,
 .menu-button,
 .menu-button:focus {
-    color: var(--klr_unicorn);
+    /* color: var(--klr_unicorn); */
+    color: var(--klr_shade3);
 }
+.show-menu .menu-button {
+    color: var(--klr_unicorn);
+    /* color: var(--klr_shade3); */
+}
+.menu-button:focus {
+    /* color: var(--klr_unicorn); */
+    color: var(--klr_shade2);
+}
+
 .menu-button,
 .menu-wrap {
     -webkit-transform: translate3d(0.9em,0.9em,0);
@@ -42,10 +52,8 @@
 #logo {
     z-index: 2000;
     font-size: 1.1em;
-    /* top: -3px; */
     top: 27px;
-    right: 30px
-    /* padding: 30px; */
+    right: 26px
 }
 
 #header .icon-list {
