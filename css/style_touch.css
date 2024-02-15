@@ -32,15 +32,12 @@
 #logo a,
 .menu-button,
 .menu-button:focus {
-    /* color: var(--klr_unicorn); */
     color: var(--klr_shade3);
 }
 .show-menu .menu-button {
     color: var(--klr_unicorn);
-    /* color: var(--klr_shade3); */
 }
 .menu-button:focus {
-    /* color: var(--klr_unicorn); */
     color: var(--klr_shade2);
 }
 

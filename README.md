@@ -3,6 +3,7 @@ Just the repository for my personal portfolio, set up as a Github page. Fancy en
 
 ## To-Do
 - Minifying
+- check desktop touch
 - Pitch final touch
 
 ## Debt
