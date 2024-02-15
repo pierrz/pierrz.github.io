@@ -11,7 +11,8 @@ fetch('./html/bio.html')
 
 
 // MODERNIZR (desktop/mobile subtleties)
-const furtherTag = document.getElementById('span_further');
+// const furtherTag = document.getElementById('span_further');
+var furtherTagScrollIndex;
 if (!Modernizr.touch) {
   
     // Skrollr
@@ -23,9 +24,10 @@ if (!Modernizr.touch) {
     skrollr.init();
 
     // ScrollIt
-    const bioTag = document.getElementById('bio');
+    const bioTag = document.getElementById('bio'),
+        furtherTagScrollIndex = '4';
     bioTag.setAttribute('data-scroll-index', '2');
-    furtherTag.setAttribute('data-scroll-index', '4');
+    // furtherTag.setAttribute('data-scroll-index', '4');
     $.scrollIt({
       topOffset: -1     // hack to trigger on the last nav (technically, it should be -110)
     });
@@ -40,9 +42,10 @@ else {
     document.head.appendChild(touchCss);
 
     // ScrollIt
-    const bioTag = document.getElementById('bio-content');
+    const bioTag = document.getElementById('bio-content'),
+        furtherTagScrollIndex = '3';
     bioTag.setAttribute('data-scroll-index', '2');
-    furtherTag.setAttribute('data-scroll-index', '3');
+    // furtherTag.setAttribute('data-scroll-index', '3');
     $.scrollIt({
       topOffset: -55
     });
@@ -51,6 +54,10 @@ else {
 
 // ANIMSITION PARAMETERS
 $(document).ready(function() {
+    
+    const furtherTag = document.getElementById('span_further');
+    furtherTag.setAttribute('data-scroll-index', furtherTagScrollIndex);
+
     $(".animsition").animsition({
         // Transition Type
         inClass: 'fade-in',
