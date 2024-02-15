@@ -458,15 +458,10 @@ a:hover > i.material-icons {
 .menu-button:focus {
 	outline: none;
 }
-/* .show-menu .menu-button:hover {
-	color: var(--klr_shade2);
-} */
 
 .menu-button:hover,
 .show-menu .menu-button:hover,
 .show-menu .menu-button:focus {
-	/* color: var(--klr_shade2);
-	background: var(--klr_bkgrnd);	 */
 	border-radius: 0;
 }
 .show-menu .menu-button,
@@ -488,7 +483,6 @@ a:hover > i.material-icons {
 	position: fixed;
 	right: 38px;
 	top: 38px;
-	/* padding: 45px 35px; */
 	font-size: 1em;
 	letter-spacing: 1px;
 	margin: 0;
@@ -497,18 +491,14 @@ a:hover > i.material-icons {
 	z-index: 2000;
 	/* desktop specific */
 	font-size: 1.3em;
-	/* padding: 38px; */
 }
-/* #logo a {
-	color: var(--klr_bkgrnd);
-} */
 #logo a:hover {
 	text-decoration: none;
-	/* color: var(--klr_unicorn); */
-	/* color: var(--klr_shade2);
-	background: var(--klr_bkgrnd); */
 }
 
+/***********************************************/
+/* MENU / LOGO HOVER (via top.js) */
+/***********************************************/
 .default_top {
 	color: var(--klr_bkgrnd);
 }

@@ -1,3 +1,7 @@
+/* 
+Script handling all UI animations for the top components (menu and logo)
+*/
+
 (function() {
 
 	// HTML elements
@@ -6,11 +10,6 @@
 		iconList = document.querySelector( '.icon-list' ),
 		logo = document.getElementById('logo').getElementsByTagName('a')[0],
 		bioSection = document.getElementById('bio');
-		// bioSection = document.getElementById('bio'),
-		// // scrolling positions
-		// bioTop = bioSection.offsetTop,
-		// bioBottom = bioTop + bioSection.offsetHeight,
-		// scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
 	var isOpen = false;
 
@@ -92,24 +91,11 @@
 	};
 
 	function landingDefault() {
-		
-		const bioTop = bioSection.offsetTop;
-
 		menuButton.classList.add('default_top');
 		logo.classList.add('default_top');
-		// if (scrollPosition < bioTop ) {
-		// 	logo.addEventListener('mouseenter', function() {
-		// 		this.style.color = 'var(--klr_unicorn)';
-		// 	});
-		// 	logo.addEventListener('mouseleave', function() {
-		// 		this.style.color = '';
-		// 	});
-		// };
 	};
 	
 	landingDefault()
-	// menuButton.classList.add('default_top');
-	// logo.classList.add('default_top');
 	initEvents();
 
 })();
