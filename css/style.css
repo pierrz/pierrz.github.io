@@ -189,7 +189,6 @@ a:hover > i.material-icons {
 	width: 100%;
 	padding: 2em 20% 6em 20%;
 	font-size: large;
-	line-height: 1.35em;
     font-weight: 100;
 }
 
@@ -206,21 +205,18 @@ a:hover > i.material-icons {
 	}
 }
 
-/* #bio .row .pitch p {
-	font-size: large;
-	line-height: 1.35em;
-} */
-
 #bio .row .pitch span,
 #bio .row .pitch span a {
 	font-weight: 300;
 	border-bottom: #7F7F7F 1px dashed;
+	font-style: italic;
 }
 #bio .row .pitch span:hover,
 #bio .row .pitch span:hover a {
 	background-color: var(--klr_unicorn);
 	color: var(--klr_bkgrnd);
 	border-bottom: none;
+
 }
 
 @media (max-width: 1200px) {
@@ -235,6 +231,10 @@ a:hover > i.material-icons {
 	list-style-type: square;
     list-style-position: inside;
 	text-align: justify;
+}
+.pitch ul,
+.pitch p {
+	line-height: 1.35em;
 }
 
 
