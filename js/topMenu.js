@@ -1,8 +1,7 @@
 (function() {
 
-	const
-		// HTML elements
-		bodyEl = document.body,
+	// HTML elements
+	const bodyEl = document.body,
 		menuButton = document.getElementById( 'open-button' ),
 		menuIcon = menuButton.querySelector( '.material-icons' ),
 		iconList = document.querySelector( '.icon-list' ),
