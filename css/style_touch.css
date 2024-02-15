@@ -111,6 +111,7 @@
 #bio .row .pitch span#span_mobile {
     color: var(--klr_unicorn);
     font-weight: 500;
+    font-style: normal;
 }
 #bio .row .pitch p > a:hover,
 #bio .row .pitch span a:hover,

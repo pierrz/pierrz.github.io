@@ -227,14 +227,15 @@ a:hover > i.material-icons {
 	}	
 }
 
+.pitch p {
+	line-height: 1.5em;
+}
 .pitch ul {
 	list-style-type: square;
     list-style-position: inside;
 	text-align: justify;
-}
-.pitch ul,
-.pitch p {
-	line-height: 1.35em;
+    margin-bottom: 2rem;
+	line-height: 1.8em;
 }
 
 
@@ -665,6 +666,7 @@ a:hover > i.material-icons {
 	color: var(--klr_unicorn);
 	border-bottom: none;
 	font-weight: 500;
+	font-style: normal;
 }
 #bio .row .pitch span#span_desktop:hover {
 	color: var(--klr_bkgrnd);
