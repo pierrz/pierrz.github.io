@@ -1,10 +1,17 @@
 (function() {
 
-	const bodyEl = document.body,
+	const
+		// HTML elements
+		bodyEl = document.body,
 		menuButton = document.getElementById( 'open-button' ),
 		menuIcon = menuButton.querySelector( '.material-icons' ),
 		iconList = document.querySelector( '.icon-list' ),
-		logo = document.getElementById('logo').getElementsByTagName('a')[0];
+		logo = document.getElementById('logo').getElementsByTagName('a')[0],
+		bioSection = document.getElementById('bio'),
+		// scrolling positions
+		bioTop = bioSection.offsetTop,
+		bioBottom = bioTop + bioSection.offsetHeight,
+		scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
 	var isOpen = false;
 
@@ -31,11 +38,6 @@
 
 	function srollTuning() {
 
-		const bioSection = document.getElementById('bio'),
-			bioTop = bioSection.offsetTop,
-			bioBottom = bioTop + bioSection.offsetHeight,
-			scrollPosition = window.scrollY || document.documentElement.scrollTop;
-
 		// change stying only for bio section
 		if (scrollPosition >= bioTop && scrollPosition <= bioBottom ) {
 			menuButton.classList.remove('default_top');
@@ -48,12 +50,6 @@
 			logo.classList.remove('tuned_top');
 			menuButton.classList.add('default_top');
 			logo.classList.add('default_top');
-			logo.addEventListener('mouseenter', function() {
-				this.style.color = 'var(--klr_unicorn)';
-			});
-			logo.addEventListener('mouseleave', function() {
-				this.style.color = '';
-			});
 		};
 		
 		// logo disapears below bio section
@@ -92,8 +88,20 @@
 		window.addEventListener('scroll', srollTuning );
 	};
 
-	menuButton.classList.add('default_top');
-	logo.classList.add('default_top');
+	function landingDefault() {
+		menuButton.classList.add('default_top');
+		logo.classList.add('default_top');
+		if (scrollPosition < bioTop ) {
+			logo.addEventListener('mouseenter', function() {
+				this.style.color = 'var(--klr_unicorn)';
+			});
+			logo.addEventListener('mouseleave', function() {
+				this.style.color = '';
+			});
+		};
+	};
+	
+	landingDefault()
 	initEvents();
 
 })();
