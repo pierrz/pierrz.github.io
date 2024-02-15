@@ -25,6 +25,10 @@ async function fetchHtml() {
 // var furtherTagScrollIndex;
 fetchHtml().then(htmlContent => {
 
+    document.getElementById('bio-content').innerHTML = htmlContent;
+    const furtherTag = document.getElementById('span_further');
+    // var furtherTagScrollIndex;
+
     if (!Modernizr.touch) {
     
         // Skrollr
@@ -36,10 +40,9 @@ fetchHtml().then(htmlContent => {
         skrollr.init();
 
         // ScrollIt
-        const bioTag = document.getElementById('bio'),
-            furtherTagScrollIndex = '4';
+        const bioTag = document.getElementById('bio');
         bioTag.setAttribute('data-scroll-index', '2');
-        // furtherTag.setAttribute('data-scroll-index', '4');
+        furtherTag.setAttribute('data-scroll-index', '4');
         $.scrollIt({
         topOffset: -1     // hack to trigger on the last nav (technically, it should be -110)
         });
@@ -54,19 +57,19 @@ fetchHtml().then(htmlContent => {
         document.head.appendChild(touchCss);
 
         // ScrollIt
-        const bioTag = document.getElementById('bio-content'),
-            furtherTagScrollIndex = '3';
+        const bioTag = document.getElementById('bio-content');
         bioTag.setAttribute('data-scroll-index', '2');
+        furtherTag.setAttribute('data-scroll-index', '3');
         // furtherTag.setAttribute('data-scroll-index', '3');
         $.scrollIt({
         topOffset: -55
         });
     };
 
-    document.getElementById('bio-content').innerHTML = htmlContent;
-    const furtherTag = document.getElementById('span_further');
-    furtherTag.setAttribute('data-scroll-index', furtherTagScrollIndex);
+    // document.getElementById('bio-content').innerHTML = htmlContent;
+    // const furtherTag = document.getElementById('span_further');
     
+
 });
 
 
