@@ -1,11 +1,11 @@
 (function() {
 
 	// HTML elements
-	const bodyEl = document.body,
-		menuButton = document.getElementById( 'open-button' ),
+	const menuButton = document.getElementById( 'open-button' ),
 		menuIcon = menuButton.querySelector( '.material-icons' ),
 		iconList = document.querySelector( '.icon-list' ),
-		logo = document.getElementById('logo').getElementsByTagName('a')[0];
+		logo = document.getElementById('logo').getElementsByTagName('a')[0],
+		bioSection = document.getElementById('bio');
 		// bioSection = document.getElementById('bio'),
 		// // scrolling positions
 		// bioTop = bioSection.offsetTop,
@@ -16,10 +16,10 @@
 
 	function toggleMenu() {
 		if( isOpen ) {
-			bodyEl.classList.remove( 'show-menu' );
+			document.body.classList.remove( 'show-menu' );
 		}
 		else {
-			bodyEl.classList.add( 'show-menu' );
+			document.body.classList.add( 'show-menu' );
 		}
 		isOpen = !isOpen;
 	};
@@ -37,8 +37,7 @@
 
 	function srollTuning() {
 
-		const bioSection = document.getElementById('bio'),
-			bioTop = bioSection.offsetTop,
+		const bioTop = bioSection.offsetTop,
 			bioBottom = bioTop + bioSection.offsetHeight,
 			scrollPosition = window.scrollY || document.documentElement.scrollTop;
 			
@@ -93,6 +92,9 @@
 	};
 
 	function landingDefault() {
+		
+		const bioTop = bioSection.offsetTop;
+
 		menuButton.classList.add('default_top');
 		logo.classList.add('default_top');
 		if (scrollPosition < bioTop ) {
@@ -105,9 +107,9 @@
 		};
 	};
 	
-	// landingDefault()
-	menuButton.classList.add('default_top');
-	logo.classList.add('default_top');
+	landingDefault()
+	// menuButton.classList.add('default_top');
+	// logo.classList.add('default_top');
 	initEvents();
 
 })();
