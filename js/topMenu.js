@@ -7,7 +7,7 @@
 		logo = document.getElementById('logo').getElementsByTagName('a')[0];
 
 	var isOpen = false;
-	
+
 	function toggleMenu() {
 		if( isOpen ) {
 			bodyEl.classList.remove( 'show-menu' );
@@ -51,10 +51,10 @@
 			logo.addEventListener('mouseenter', function() {
 				this.style.color = 'var(--klr_unicorn)';
 			});
-			menuButton.addEventListener('mouseleave', function() {
+			logo.addEventListener('mouseleave', function() {
 				this.style.color = '';
 			});
-		}
+		};
 		
 		// logo disapears below bio section
 		if (scrollPosition >= bioBottom ) {
@@ -62,7 +62,7 @@
 		}
 		else {
 			logo.style.display = ""
-		}
+		};
 		
 	};
 
