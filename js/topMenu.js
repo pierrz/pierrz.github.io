@@ -101,7 +101,9 @@
 		};
 	};
 	
-	landingDefault()
+	// landingDefault()
+	menuButton.classList.add('default_top');
+	logo.classList.add('default_top');
 	initEvents();
 
 })();
