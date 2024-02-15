@@ -6,9 +6,9 @@
 		iconList = document.querySelector( '.icon-list' ),
 		logo = document.getElementById('logo').getElementsByTagName('a')[0];
 
-		
+	var isOpen = false;
+	
 	function toggleMenu() {
-		var isOpen = false;
 		if( isOpen ) {
 			bodyEl.classList.remove( 'show-menu' );
 		}
