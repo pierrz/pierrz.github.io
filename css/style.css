@@ -462,10 +462,10 @@ a:hover > i.material-icons {
 	background: var(--klr_bkgrnd);	 */
 	border-radius: 0;
 }
-/* .show-menu .menu-button,
+.show-menu .menu-button,
 .show-menu .menu-button:focus {
 	color: var(--klr_shade3);
-} */
+}
 
 .menu-button .fa-bars {
 	display: inherit;
