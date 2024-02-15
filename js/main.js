@@ -2,12 +2,12 @@
 Script handling how the main components behave
 */
 
-// BIO CONTENT
-fetch('./html/bio.html')
-.then(response => response.text())
-.then(htmlContent => {
-    document.getElementById('bio-content').innerHTML = htmlContent;
-});
+// // BIO CONTENT
+// fetch('./html/bio.html')
+// .then(response => response.text())
+// .then(htmlContent => {
+//     document.getElementById('bio-content').innerHTML = htmlContent;
+// });
 
 
 // MODERNIZR (desktop/mobile subtleties)
@@ -50,6 +50,16 @@ else {
       topOffset: -55
     });
 };
+
+
+// BIO CONTENT
+fetch('./html/bio.html')
+.then(response => response.text())
+.then(htmlContent => {
+    document.getElementById('bio-content').innerHTML = htmlContent;
+    const furtherTag = document.getElementById('span_further');
+    furtherTag.setAttribute('data-scroll-index', furtherTagScrollIndex);
+});
 
 
 // ANIMSITION PARAMETERS
