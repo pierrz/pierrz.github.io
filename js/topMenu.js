@@ -1,11 +1,3 @@
-/*
- * Inspiration from
- * http://www.codrops.com
- * Copyright 2014, Codrops
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- */
-
 (function() {
 
 	const bodyEl = document.body,
@@ -13,22 +5,10 @@
 		menuIcon = menuButton.querySelector( '.material-icons' ),
 		iconList = document.querySelector( '.icon-list' ),
 		logo = document.getElementById('logo').getElementsByTagName('a')[0];
-	// 	landingSection = document.getElementById('landing'),
-	// 	bioSection = document.getElementById('bio'),
-	// 	gridSection = document.getElementById('grid');
 
-	// // scrolled positions
-	// const landingTop = landingSection.offsetTop,
-	// 	landingBottom = landingTop + landingSection.offsetHeight,
-	// 	bioTop = bioSection.offsetTop,
-	// 	bioBottom = bioTop + bioSection.offsetHeight,
-	// 	gridTop = gridSection.offsetTop,
-	// 	gridBottom = gridTop + gridSection.offsetHeight,
-	// 	scrollPosition = window.scrollY || document.documentElement.scrollTop;
-
-	var isOpen = false;
-
+		
 	function toggleMenu() {
+		var isOpen = false;
 		if( isOpen ) {
 			bodyEl.classList.remove( 'show-menu' );
 		}
@@ -39,92 +19,62 @@
 	};
 
 	function changeIcon() {
+	// toggle menu/close icons and update aria-label accordingly
 		if (menuIcon.textContent === 'menu') {
-			menuIcon.textContent = 'close'; // Change to close icon
-			menuIcon.setAttribute('aria-label', 'Close'); // Update aria-label for accessibility
+			menuIcon.textContent = 'close';
+			menuIcon.setAttribute('aria-label', 'Close');
 		} else {
-			menuIcon.textContent = 'menu'; // Change back to menu icon
-			menuIcon.setAttribute('aria-label', 'Menu'); // Update aria-label for accessibility
+			menuIcon.textContent = 'menu';
+			menuIcon.setAttribute('aria-label', 'Menu');
 		}
 	};
 
 	function srollTuning() {
-		// HTML elements
-		const landingSection = document.getElementById('landing'),
-				bioSection = document.getElementById('bio'),
-				gridSection = document.getElementById('grid'),
-		// scrolled positions
-				landingTop = landingSection.offsetTop,
-				landingBottom = landingTop + landingSection.offsetHeight,
-				bioTop = bioSection.offsetTop,
-				bioBottom = bioTop + bioSection.offsetHeight,
-				gridTop = gridSection.offsetTop,
-				gridBottom = gridTop + gridSection.offsetHeight,
-				scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-		// // html elements
-		// const menuButton = document.querySelector('.menu-button'),
-		// 		logo = document.getElementById('logo').getElementsByTagName('a')[0],
-		// 		landingSection = document.getElementById('landing'),
-		// 		bioSection = document.getElementById('bio'),
-		// 		gridSection = document.getElementById('grid');
-		
-		// // scrolled positions
-		// const landingTop = landingSection.offsetTop,
-		// 		landingBottom = landingTop + landingSection.offsetHeight,
-		// 		bioTop = bioSection.offsetTop,
-		// 		bioBottom = bioTop + bioSection.offsetHeight,
-		// 		gridTop = gridSection.offsetTop,
-		// 		gridBottom = gridTop + gridSection.offsetHeight,
-		// 		scrollPosition = window.scrollY || document.documentElement.scrollTop;
-		
-		// menuButton.classList.add('default_top');
-		// logo.classList.add('default_top');
+		const bioSection = document.getElementById('bio'),
+			bioTop = bioSection.offsetTop,
+			bioBottom = bioTop + bioSection.offsetHeight,
+			scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-		// window.addEventListener('scroll', function() {
-			// change stying only for bio section
-			if (scrollPosition >= bioTop && scrollPosition <= bioBottom ) {
-				menuButton.classList.remove('default_top');
-				logo.classList.remove('default_top');
-				menuButton.classList.add('tuned_top');
-				logo.classList.add('tuned_top');
-			} 
-			else {
-				menuButton.classList.remove('tuned_top');
-				logo.classList.remove('tuned_top');
-				menuButton.classList.add('default_top');
-				logo.classList.add('default_top');
-			}
+		// change stying only for bio section
+		if (scrollPosition >= bioTop && scrollPosition <= bioBottom ) {
+			menuButton.classList.remove('default_top');
+			logo.classList.remove('default_top');
+			menuButton.classList.add('tuned_top');
+			logo.classList.add('tuned_top');
+		} 
+		else {
+			menuButton.classList.remove('tuned_top');
+			logo.classList.remove('tuned_top');
+			menuButton.classList.add('default_top');
+			logo.classList.add('default_top');
+			logo.addEventListener('mouseenter', function() {
+				this.style.color = 'var(--klr_unicorn)';
+			});
+			menuButton.addEventListener('mouseleave', function() {
+				this.style.color = '';
+			});
+		}
 		
-			// menuButton.addEventListener('mouseenter', function() {
-			// 	this.classList.add('hovered');
-			// });
-			// logo.addEventListener('mouseenter', function() {
-			// 	this.classList.add('hovered');
-			// });
-			// menuButton.addEventListener('mouseleave', function() {
-			// 	this.classList.remove('hovered');
-			// });
-			// logo.addEventListener('mouseleave', function() {
-			// 	this.classList.remove('hovered');
-			// });
-			
-			// logo disapears below bio section
-			if (scrollPosition >= bioBottom ) {
-				logo.style.display = "none"
-			}
-			else {
-				logo.style.display = ""
-			}
+		// logo disapears below bio section
+		if (scrollPosition >= bioBottom ) {
+			logo.style.display = "none"
+		}
+		else {
+			logo.style.display = ""
+		}
 		
-		// });
 	};
 
 	function initEvents() {
+
+		// clic
 		menuButton.addEventListener( 'click', toggleMenu );
 		menuButton.addEventListener( 'click', changeIcon );
 		iconList.addEventListener( 'click', toggleMenu );
 		iconList.addEventListener( 'click', changeIcon );
+		
+		// hover
 		menuButton.addEventListener('mouseenter', function() {
 			this.classList.add('hovered');
 		});
@@ -137,12 +87,13 @@
 		logo.addEventListener('mouseleave', function() {
 			this.classList.remove('hovered');
 		});
+		
+		// scroll
 		window.addEventListener('scroll', srollTuning );
 	};
 
 	menuButton.classList.add('default_top');
 	logo.classList.add('default_top');
-	// srolltuning()
 	initEvents();
 
 })();
