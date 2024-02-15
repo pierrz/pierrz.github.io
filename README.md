@@ -5,6 +5,7 @@ Just the repository for my personal portfolio, set up as a Github page. Fancy en
 - Dev corner/branch
 - LFS for oldies/originals
 - Minifying
+- Gtag
 - Pitch final touch
 
 ## Debt

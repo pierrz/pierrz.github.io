@@ -9,57 +9,75 @@ Script handling how the main components behave
 //     document.getElementById('bio-content').innerHTML = htmlContent;
 // });
 
+async function fetchHtml() {
+    try {
+        const response = await fetch('./html/bio.html'),
+            htmlContent = await response.text();
+        return htmlContent;
+    } catch (error) {
+        console.error('Error loading HTML:', error);
+    }
+}
+
 
 // MODERNIZR (desktop/mobile subtleties)
 // const furtherTag = document.getElementById('span_further');
-var furtherTagScrollIndex;
-if (!Modernizr.touch) {
-  
-    // Skrollr
-    const skrollrCss = document.createElement('link');
-    skrollrCss.type = 'text/css';
-    skrollrCss.rel = 'stylesheet';
-    skrollrCss.href = 'css/style_skrollr.css';
-    document.head.appendChild(skrollrCss);
-    skrollr.init();
+// var furtherTagScrollIndex;
+fetchHtml().then(htmlContent => {
 
-    // ScrollIt
-    const bioTag = document.getElementById('bio'),
-        furtherTagScrollIndex = '4';
-    bioTag.setAttribute('data-scroll-index', '2');
-    // furtherTag.setAttribute('data-scroll-index', '4');
-    $.scrollIt({
-      topOffset: -1     // hack to trigger on the last nav (technically, it should be -110)
-    });
+    if (!Modernizr.touch) {
+    
+        // Skrollr
+        const skrollrCss = document.createElement('link');
+        skrollrCss.type = 'text/css';
+        skrollrCss.rel = 'stylesheet';
+        skrollrCss.href = 'css/style_skrollr.css';
+        document.head.appendChild(skrollrCss);
+        skrollr.init();
 
-}
-else {
-    //CSS styling for touch-screens
-    const touchCss = document.createElement('link');
-    touchCss.type = 'text/css';
-    touchCss.rel = 'stylesheet';
-    touchCss.href = 'css/style_touch.css';
-    document.head.appendChild(touchCss);
+        // ScrollIt
+        const bioTag = document.getElementById('bio'),
+            furtherTagScrollIndex = '4';
+        bioTag.setAttribute('data-scroll-index', '2');
+        // furtherTag.setAttribute('data-scroll-index', '4');
+        $.scrollIt({
+        topOffset: -1     // hack to trigger on the last nav (technically, it should be -110)
+        });
 
-    // ScrollIt
-    const bioTag = document.getElementById('bio-content'),
-        furtherTagScrollIndex = '3';
-    bioTag.setAttribute('data-scroll-index', '2');
-    // furtherTag.setAttribute('data-scroll-index', '3');
-    $.scrollIt({
-      topOffset: -55
-    });
-};
+    }
+    else {
+        //CSS styling for touch-screens
+        const touchCss = document.createElement('link');
+        touchCss.type = 'text/css';
+        touchCss.rel = 'stylesheet';
+        touchCss.href = 'css/style_touch.css';
+        document.head.appendChild(touchCss);
 
+        // ScrollIt
+        const bioTag = document.getElementById('bio-content'),
+            furtherTagScrollIndex = '3';
+        bioTag.setAttribute('data-scroll-index', '2');
+        // furtherTag.setAttribute('data-scroll-index', '3');
+        $.scrollIt({
+        topOffset: -55
+        });
+    };
 
-// BIO CONTENT
-fetch('./html/bio.html')
-.then(response => response.text())
-.then(htmlContent => {
     document.getElementById('bio-content').innerHTML = htmlContent;
     const furtherTag = document.getElementById('span_further');
     furtherTag.setAttribute('data-scroll-index', furtherTagScrollIndex);
+    
 });
+
+
+// BIO CONTENT
+// fetch('./html/bio.html')
+// .then(response => response.text())
+// .then(htmlContent => {
+//     document.getElementById('bio-content').innerHTML = htmlContent;
+//     const furtherTag = document.getElementById('span_further');
+//     furtherTag.setAttribute('data-scroll-index', furtherTagScrollIndex);
+// });
 
 
 // ANIMSITION PARAMETERS
