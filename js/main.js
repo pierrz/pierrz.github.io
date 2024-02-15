@@ -75,89 +75,59 @@ $(document).ready(function() {
 });
 
 
-window.addEventListener('scroll', function() {
-    // html elements
-    const menuButton = document.querySelector('.menu-button'),
-            logo = document.getElementById('logo').getElementsByTagName('a')[0],
-            landingSection = document.getElementById('landing'),
-            bioSection = document.getElementById('bio'),
-            gridSection = document.getElementById('grid');
+// window.addEventListener('scroll', function() {
+//     // html elements
+//     const menuButton = document.querySelector('.menu-button'),
+//             logo = document.getElementById('logo').getElementsByTagName('a')[0],
+//             landingSection = document.getElementById('landing'),
+//             bioSection = document.getElementById('bio'),
+//             gridSection = document.getElementById('grid');
     
-    // scrolled positions
-    const landingTop = landingSection.offsetTop,
-            landingBottom = landingTop + landingSection.offsetHeight,
-            bioTop = bioSection.offsetTop,
-            bioBottom = bioTop + bioSection.offsetHeight,
-            gridTop = gridSection.offsetTop,
-            gridBottom = gridTop + gridSection.offsetHeight,
-            scrollPosition = window.scrollY || document.documentElement.scrollTop;
+//     // scrolled positions
+//     const landingTop = landingSection.offsetTop,
+//             landingBottom = landingTop + landingSection.offsetHeight,
+//             bioTop = bioSection.offsetTop,
+//             bioBottom = bioTop + bioSection.offsetHeight,
+//             gridTop = gridSection.offsetTop,
+//             gridBottom = gridTop + gridSection.offsetHeight,
+//             scrollPosition = window.scrollY || document.documentElement.scrollTop;
     
-    menuButton.classList.add('default_top');
-    logo.classList.add('default_top');
-    // change stying only for bio section
-    if (scrollPosition >= bioTop && scrollPosition <= bioBottom ) {
-      menuButton.classList.remove('default_top');
-      logo.classList.remove('default_top');
-      menuButton.classList.add('tuned_top');
-      logo.classList.add('tuned_top');
-      // menuButton.style.color = "var(--klr_shade3)"
-      // logo.style.color = "var(--klr_shade3)"
+//     menuButton.classList.add('default_top');
+//     logo.classList.add('default_top');
+//     // change stying only for bio section
+//     if (scrollPosition >= bioTop && scrollPosition <= bioBottom ) {
+//       menuButton.classList.remove('default_top');
+//       logo.classList.remove('default_top');
+//       menuButton.classList.add('tuned_top');
+//       logo.classList.add('tuned_top');
+//     } 
+//     else {
+//       menuButton.classList.remove('tuned_top');
+//       logo.classList.remove('tuned_top');
+//       menuButton.classList.add('default_top');
+//       logo.classList.add('default_top');
+//     }
 
-    //   menuButton.addEventListener('mouseenter', function() {
-    //     this.style.color = "";
-    //   });
-    //   logo.addEventListener('mouseenter', function() {
-    //     this.style.color = "";
-    //   });
-      // menuButton.addEventListener('mouseleave', function() {
-      //   this.classList.remove('hovered');
-      //   // this.style.color = "var(--klr_shade3)";
-      // });
-      // logo.addEventListener('mouseleave', function() {
-      //   this.classList.remove('hovered');
-      //   // this.style.color = "var(--klr_shade3)";
-      // });
+//     menuButton.addEventListener('mouseenter', function() {
+//       this.classList.add('hovered');
+//     });
+//     logo.addEventListener('mouseenter', function() {
+//       this.classList.add('hovered');
+//     });
+//     menuButton.addEventListener('mouseleave', function() {
+//       this.classList.remove('hovered');
+//     });
+//     logo.addEventListener('mouseleave', function() {
+//       this.classList.remove('hovered');
+//     });
     
-    } 
-    // else {
-    //   menuButton.style.color = "var(--klr_bkgrnd)"
-    //   logo.style.color = "var(--klr_bkgrnd)"
-    //   menuButton.addEventListener('mouseleave', function() {
-    //     this.classList.remove('hovered');
-    //     // this.style.color = "var(--klr_bkgrnd)";
-    //     });
-    //     logo.addEventListener('mouseleave', function() {
-    //       this.classList.remove('hovered');
-    //         // this.style.color = "var(--klr_bkgrnd)";
-    //     });
-    // }
+//     // logo disapears below bio section
+//     if (scrollPosition >= bioBottom ) {
+//         logo.style.display = "none"
+//     }
+//     else {
+//         logo.style.display = ""
+//     }
 
-    menuButton.addEventListener('mouseenter', function() {
-      this.classList.add('hovered');
-    });
-    logo.addEventListener('mouseenter', function() {
-      this.classList.add('hovered');
-    });
-    menuButton.addEventListener('mouseleave', function() {
-      this.classList.remove('hovered');
-    });
-    logo.addEventListener('mouseleave', function() {
-      this.classList.remove('hovered');
-    });
-    // menuButton.addEventListener('mouseleave', function() {
-    //     this.style.color = "var(--klr_shade3)";
-    // });
-    // logo.addEventListener('mouseleave', function() {
-    //     this.style.color = "var(--klr_shade3)";
-    // });
-    
-    // logo disapears below bio section
-    if (scrollPosition >= bioBottom ) {
-        logo.style.display = "none"
-    }
-    else {
-        logo.style.display = ""
-    }
-
-  });
+//   });
   
