@@ -188,6 +188,9 @@ a:hover > i.material-icons {
 #bio .row .pitch {
 	width: 100%;
 	padding: 2em 20% 6em 20%;
+	font-size: large;
+	line-height: 1.35em;
+    font-weight: 100;
 }
 
 #bio .row .pitch img {
@@ -203,10 +206,10 @@ a:hover > i.material-icons {
 	}
 }
 
-#bio .row .pitch p {
+/* #bio .row .pitch p {
 	font-size: large;
 	line-height: 1.35em;
-}
+} */
 
 #bio .row .pitch span,
 #bio .row .pitch span a {
@@ -227,6 +230,13 @@ a:hover > i.material-icons {
 		padding-right: 15%;
 	}	
 }
+
+.pitch ul {
+	list-style-type: square;
+    list-style-position: inside;
+	text-align: justify;
+}
+
 
 /***********************************************/
 /* SECTION 3 - IMAGE/LINKS GRID */
