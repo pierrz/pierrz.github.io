@@ -509,11 +509,14 @@ a:hover > i.material-icons {
 	color: var(--klr_shade3);
 }
 
-.show-menu .hovered,
+.show-menu .menu-button.hovered,
+.show-menu .menu-button.hovered:focus,
+#logo a.hovered,
 .hovered {
 	color: var(--klr_shade2);
 	background: var(--klr_bkgrnd);
 }
+
 /***********************************************/
 /* ICONS */
 /***********************************************/
