@@ -6,7 +6,7 @@ Script handling how the main components behave
 // Asynchronous function getting the html content for the 'Bio' section
 async function fetchHtml() {
     try {
-        const response = await fetch('./html/bio.html'),
+        const response = await fetch('../html/bio.html'),
             htmlContent = await response.text();
         return htmlContent;
     } catch (error) {

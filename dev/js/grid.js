@@ -6,7 +6,7 @@ Script handling the bottom component (grid on desktop or links on mobile/touch-s
 // Asynchronous function getting the grid parameters data
 async function fetchData() {
     try {
-        const response = await fetch('./assets/backgrounds/grid_parameters.json'),
+        const response = await fetch('../assets/backgrounds/grid_parameters.json'),
             jsonData = await response.json();
         return jsonData;
     } catch (error) {
