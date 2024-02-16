@@ -98,7 +98,10 @@
 }
 #bio .row .pitch {
     padding: 0.5em 10%;
-    font-size: 1.3em;
+    font-size: 1.15em;
+}
+.pitch ul {
+	padding-left: 10px;
 }
 
 #bio .row .pitch span:hover,
