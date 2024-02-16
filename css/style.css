@@ -275,7 +275,7 @@ a:hover > i.material-icons {
 #sk_question.gridCell p.title {
 	padding-top: 0;
 }
-#sk_question.gridCell > .link a:hover {
+#sk_question.gridCell > .link > a:hover {
 	cursor: default;
 }
 
