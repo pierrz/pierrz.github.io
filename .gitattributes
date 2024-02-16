@@ -1,2 +1,12 @@
+# pre-2024 assets (all-in)
 src/*/*.* filter=lfs diff=lfs merge=lfs -text
 src/*/*/*.* filter=lfs diff=lfs merge=lfs -text
+# post-2024 assets (selective)
+assets/backgrounds/orig/*.* filter=lfs diff=lfs merge=lfs -text
+assets/backgrounds/orig/*.*© filter=lfs diff=lfs merge=lfs -text
+assets/va/+orig/*.* filter=lfs diff=lfs merge=lfs -text
+assets/va/originals/*.* filter=lfs diff=lfs merge=lfs -text
+assets/backgrounds/originals/*.* filter=lfs diff=lfs merge=lfs -text
+assets/src/backgrounds/*/*.* filter=lfs diff=lfs merge=lfs -text
+assets/src/va/+orig/*.* filter=lfs diff=lfs merge=lfs -text
+assets/src/va/*.* filter=lfs diff=lfs merge=lfs -text

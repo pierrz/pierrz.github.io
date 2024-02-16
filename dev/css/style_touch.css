@@ -1,0 +1,169 @@
+/* ============================================================ */
+/* ============================================================ */
+/* MOBILE/TOUCH-SCREEN SPECIFIC */
+/* ============================================================ */
+/* ============================================================ */
+
+.menu-wrap ul li:nth-child(1),
+.menu-wrap ul li:nth-child(4),
+#landing,
+#grid {
+	display: none;
+}
+#links_mobile {
+    display: block;
+}
+
+#skrollr-body {
+    height:0;
+    overflow:visible;
+    position:relative;
+}
+
+.show-menu .menu-wrap {
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+.menu-wrap ul li:nth-child(3) {
+    display: inline-block;
+}
+#logo a,
+.menu-button,
+.menu-button:focus {
+    color: var(--klr_shade3);
+}
+.show-menu .menu-button {
+    color: var(--klr_unicorn);
+}
+.menu-button:focus {
+    color: var(--klr_shade2);
+}
+
+.menu-button,
+.menu-wrap {
+    -webkit-transform: translate3d(0.9em,0.9em,0);
+    transform: translate3d(0.9em,0.9em,0);
+}
+#logo {
+    z-index: 2000;
+    font-size: 1.1em;
+    top: 27px;
+    right: 26px
+}
+
+#header .icon-list {
+    padding-top: 33%;
+}
+.icon-list li {
+    width: 100%;
+    display: inline-block;
+}
+.icon-list li a {
+    width: 100%;
+    padding: 0.5em 0em;
+    margin: 0 5px;
+    font-size: 2.5em;
+    text-align: left;
+    padding-left: 40%;
+}
+.icon-list li a span,
+.icon-list li a i {
+    opacity: 0.7;
+    display: inline-block;
+    font-size: 1.5em;
+}
+.icon-list li.active a span,
+.icon-list li.active a i,
+.icon-list li:hover a span,
+.icon-list li:hover a i {
+    opacity: 1;
+}
+.icon-list li a i {
+    vertical-align: middle;
+}
+.icon-list li a span {
+    padding-left: 15px;
+    font-size: 1em;
+}
+#bio .container,
+#bio .container .row {
+    height: 100%;
+}
+
+#bio .container .row h3 {
+    text-align: center;
+    padding: 2em;
+    color: rgba(40,40,40,0.7);
+}
+#bio .row .pitch {
+    padding: 0.5em 10%;
+    font-size: 1.15em;
+}
+.pitch ul {
+	padding-left: 10px;
+}
+
+#bio .row .pitch span:hover,
+#bio .row .pitch span:hover a {
+    background-color: var(--klr_bkgrnd);
+    color: rgba(40,40,40,0.9);
+}
+#bio .row .pitch p > a,
+#bio .row .pitch span#span_further {
+    color: var(--klr_unicorn);
+    font-weight: 500;
+    font-style: normal;
+}
+#bio .row .pitch p > a:hover,
+#bio .row .pitch span a:hover,
+#bio .row .pitch span#span_further:hover {
+    color: var(--klr_bkgrnd);
+    background-color: var(--klr_unicorn);
+}
+
+#bio .row .pitch span a {	
+    border-bottom: #7F7F7F 1px dashed;
+}
+#bio .row .pitch span {
+    border-bottom: none;
+}
+
+/* #span_mobile { */
+#span_further {
+    display: initial;
+    cursor: pointer;
+}
+#links_mobile {
+    display: inherit;
+    padding: 4em;
+}
+#links_mobile ul {
+    display: inline-block;
+    width: 48%;
+    padding: 1%;
+}
+#links_mobile ul.icon-list li {
+    display: inline-block;
+    width: 100%;
+}
+#links_mobile ul.icon-list li a {
+    padding-left: 0;
+}
+#links_mobile ul.icon-list li:hover a {
+    color: var(--klr_unicorn);
+}
+#links_mobile ul.icon-list-left li a {
+    text-align: right;
+    padding-right: 8%;
+}
+#links_mobile ul.icon-list-left li a h4 {
+    text-align: right;
+}
+#links_mobile ul.icon-list-right li a {
+    text-align: left;
+    padding-left: 8%;
+}
+#links_mobile ul li a h4 {
+    font-size: 0.4em;
+}
