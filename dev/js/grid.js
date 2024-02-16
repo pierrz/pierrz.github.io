@@ -20,7 +20,7 @@ fetchData().then( grid_parameters => {
     if (grid_parameters) {
 
         //Main variables                            
-        var baseUrl = "assets/backgrounds/",
+        var baseUrl = "../assets/backgrounds/",
             jpgExtension = ".jpg",
             desktop_baseUrl = baseUrl + "desk/",
             // mob_baseUrl = baseUrl + "mob/",
