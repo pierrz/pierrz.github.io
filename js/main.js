@@ -2,13 +2,8 @@
 Script handling how the main components behave
 */
 
-// // BIO CONTENT
-// fetch('./html/bio.html')
-// .then(response => response.text())
-// .then(htmlContent => {
-//     document.getElementById('bio-content').innerHTML = htmlContent;
-// });
 
+// Asynchronous function getting the html content for the 'Bio' section
 async function fetchHtml() {
     try {
         const response = await fetch('./html/bio.html'),
@@ -21,13 +16,11 @@ async function fetchHtml() {
 
 
 // MODERNIZR (desktop/mobile subtleties)
-// const furtherTag = document.getElementById('span_further');
-// var furtherTagScrollIndex;
+// calls fetchHtml 1st to work on the complete DOM
 fetchHtml().then( htmlContent => {
 
     document.getElementById('bio-content').innerHTML = htmlContent;
     const furtherTag = document.getElementById('span_further');
-    // var furtherTagScrollIndex;
 
     if (!Modernizr.touch) {
     
@@ -42,9 +35,9 @@ fetchHtml().then( htmlContent => {
         // ScrollIt
         const bioTag = document.getElementById('bio');
         bioTag.setAttribute('data-scroll-index', '2');
-        furtherTag.setAttribute('data-scroll-index', '4');
+        furtherTag.setAttribute('data-scroll-goto', '4');
         $.scrollIt({
-        topOffset: -1     // hack to trigger on the last nav (technically, it should be -110)
+            topOffset: -1     // hack to trigger on the last nav (technically, it should be -110)
         });
 
     }
@@ -59,28 +52,13 @@ fetchHtml().then( htmlContent => {
         // ScrollIt
         const bioTag = document.getElementById('bio-content');
         bioTag.setAttribute('data-scroll-index', '2');
-        furtherTag.setAttribute('data-scroll-index', '3');
-        // furtherTag.setAttribute('data-scroll-index', '3');
+        furtherTag.setAttribute('data-scroll-goto', '3');
         $.scrollIt({
-        topOffset: -55
+            topOffset: -55
         });
     };
 
-    // document.getElementById('bio-content').innerHTML = htmlContent;
-    // const furtherTag = document.getElementById('span_further');
-    
-
 });
-
-
-// BIO CONTENT
-// fetch('./html/bio.html')
-// .then(response => response.text())
-// .then(htmlContent => {
-//     document.getElementById('bio-content').innerHTML = htmlContent;
-//     const furtherTag = document.getElementById('span_further');
-//     furtherTag.setAttribute('data-scroll-index', furtherTagScrollIndex);
-// });
 
 
 // ANIMSITION PARAMETERS

@@ -1,3 +1,8 @@
+/* 
+Script handling the bottom component (grid on desktop or links on mobile/touch-screen)
+*/
+
+
 // Asynchronous function getting the grid parameters data
 async function fetchData() {
     try {
@@ -8,6 +13,7 @@ async function fetchData() {
         console.error('Error loading JSON:', error);
     }
 }
+
 
 // Grid creation funtion, calling fetchData 1st and then using its data
 fetchData().then( grid_parameters => {

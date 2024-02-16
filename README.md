@@ -4,9 +4,8 @@ Just the repository for my personal portfolio, set up as a Github page. Fancy en
 ## To-Do
 - Dev corner/branch
 - LFS for oldies/originals
-- Minifying
 - Gtag
-- Pitch final touch
+- Minifying
 
 ## Debt
 - Modernizr (with html5shiv) and jQuery update

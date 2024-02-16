@@ -659,11 +659,7 @@ a:hover > i.material-icons {
 #links_mobile {
 	display: none;
 }
-/* #span_mobile {
-	display: none;
-} */
 
-/* #bio .row .pitch span#span_desktop { */
 #bio .row .pitch span#span_further {
 	cursor: pointer;
 	color: var(--klr_unicorn);
@@ -671,7 +667,6 @@ a:hover > i.material-icons {
 	font-weight: 500;
 	font-style: normal;
 }
-/* #bio .row .pitch span#span_desktop:hover { */
 #bio .row .pitch span#span_further:hover {
 	color: var(--klr_bkgrnd);
 }
