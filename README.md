@@ -2,7 +2,6 @@
 Just the repository for my personal portfolio, set up as a Github page. Fancy enough.
 
 ## To-Do
-- Dev corner/branch
 - LFS for oldies/originals
 - Gtag
 - Minifying
